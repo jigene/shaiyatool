@@ -1,0 +1,42 @@
+<RCC>
+  <qresource prefix="MainFrame">
+    <file>Resources/precision.png</file>
+    <file>Resources/cling.png</file>
+    <file>Resources/align_bottom.png</file>
+    <file>Resources/align_left.png</file>
+    <file>Resources/align_right.png</file>
+    <file>Resources/align_top.png</file>
+    <file>Resources/background_color.png</file>
+    <file>Resources/bring.png</file>
+    <file>Resources/copy.png</file>
+    <file>Resources/cut.png</file>
+    <file>Resources/delete.png</file>
+    <file>Resources/fullscreen.png</file>
+    <file>Resources/language.png</file>
+    <file>Resources/new.png</file>
+    <file>Resources/paste.png</file>
+    <file>Resources/quit.png</file>
+    <file>Resources/save.png</file>
+    <file>Resources/grid.png</file>
+    <file>Resources/about.png</file>
+    <file>Resources/GUIEditor.png</file>
+    <file>Resources/text.png</file>
+    <file>Resources/picture.png</file>
+    <file>Resources/static.png</file>
+    <file>Resources/textEdit.png</file>
+    <file>Resources/groupBox.png</file>
+    <file>Resources/button.png</file>
+    <file>Resources/checkBox.png</file>
+    <file>Resources/radioButton.png</file>
+    <file>Resources/comboBox.png</file>
+    <file>Resources/listBox.png</file>
+    <file>Resources/listCtrl.png</file>
+    <file>Resources/treeCtrl.png</file>
+    <file>Resources/tabCtrl.png</file>
+    <file>Resources/custom.png</file>
+    <file>..\Resources\language_english.png</file>
+    <file>..\Resources\language_french.png</file>
+    <file>..\Resources\language_german.png</file>
+    
+  </qresource>
+</RCC>

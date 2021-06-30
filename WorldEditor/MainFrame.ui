@@ -1,0 +1,2537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainFrameClass</class>
+ <widget class="QMainWindow" name="MainFrameClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>WorldEditor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MainFrame.qrc">
+    <normaloff>:/MainFrame/Resources/WorldEditor.png</normaloff>:/MainFrame/Resources/WorldEditor.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">background-color: #881f1f;</string>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="windowTitle">
+    <string>Barre d'outils</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>22</width>
+     <height>22</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNouveau"/>
+   <addaction name="actionOuvrir"/>
+   <addaction name="actionEnregistrer"/>
+   <addaction name="separator"/>
+   <addaction name="actionAnnuler"/>
+   <addaction name="actionR_tablir"/>
+   <addaction name="separator"/>
+   <addaction name="actionD_placer_cam_ra"/>
+   <addaction name="actionTourner_cam_ra"/>
+   <addaction name="actionZoomer_cam_ra"/>
+   <addaction name="separator"/>
+   <addaction name="actionHauteur_du_terrain"/>
+   <addaction name="actionTexture_du_terrain"/>
+   <addaction name="actionCouleur_du_terrain"/>
+   <addaction name="actionEau_et_nuages_edit"/>
+   <addaction name="actionVertices_du_continent"/>
+   <addaction name="separator"/>
+   <addaction name="actionAjouter_des_objets"/>
+   <addaction name="actionS_lectionner_des_objets"/>
+   <addaction name="actionD_placer_les_objets"/>
+   <addaction name="actionTourner_les_objets"/>
+   <addaction name="actionRedimensionner_les_objets"/>
+   <addaction name="separator"/>
+   <addaction name="actionEditX"/>
+   <addaction name="actionEditY"/>
+   <addaction name="actionEditZ"/>
+   <addaction name="actionEditXZ"/>
+   <addaction name="separator"/>
+   <addaction name="actionRamener_sur_le_sol"/>
+   <addaction name="actionVerrouiller_la_s_lection"/>
+   <addaction name="actionGravit"/>
+   <addaction name="actionPlacer_sur_la_grille"/>
+   <addaction name="separator"/>
+   <addaction name="action_dition_des_continents"/>
+   <addaction name="actionPropri_t_s_du_monde"/>
+  </widget>
+  <widget class="QDockWidget" name="dockGameElements">
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Éléments du jeu</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="CGameElementsTree" name="gameElementsTree">
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="tabKeyNavigation">
+        <bool>false</bool>
+       </property>
+       <property name="showDropIndicator" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <property name="indentation">
+        <number>15</number>
+       </property>
+       <property name="uniformRowHeights">
+        <bool>true</bool>
+       </property>
+       <property name="headerHidden">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockNavigator">
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Navigateur</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2"/>
+  </widget>
+  <widget class="QDockWidget" name="dockTerrainEdit">
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Édition du terrain</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QTabWidget" name="tabTerrain">
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>240</red>
+             <green>240</green>
+             <blue>240</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>240</red>
+             <green>240</green>
+             <blue>240</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>240</red>
+             <green>240</green>
+             <blue>240</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_5">
+        <attribute name="title">
+         <string>Hauteur</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="title">
+            <string>Mode</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>2</number>
+            </property>
+            <property name="bottomMargin">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="checkTerrainBrush1">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="MainFrame.qrc">
+                <normaloff>:/MainFrame/Resources/terrain_1.png</normaloff>:/MainFrame/Resources/terrain_1.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="checkTerrainBrush2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="MainFrame.qrc">
+                <normaloff>:/MainFrame/Resources/terrain_2.png</normaloff>:/MainFrame/Resources/terrain_2.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="checkTerrainBrush3">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="MainFrame.qrc">
+                <normaloff>:/MainFrame/Resources/terrain_3.png</normaloff>:/MainFrame/Resources/terrain_3.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="checkTerrainBrush4">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="MainFrame.qrc">
+                <normaloff>:/MainFrame/Resources/terrain_4.png</normaloff>:/MainFrame/Resources/terrain_4.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="checkTerrainBrush5">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="MainFrame.qrc">
+                <normaloff>:/MainFrame/Resources/terrain_5.png</normaloff>:/MainFrame/Resources/terrain_5.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="title">
+            <string>Forme de la brosse</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="checkTerrainRoundedBrush">
+              <property name="text">
+               <string>Ronde</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="checkTerrainSquaredBrush">
+              <property name="text">
+               <string>Carré</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>Rayon :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="label_17">
+             <property name="minimumSize">
+              <size>
+               <width>20</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>7</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QSlider" name="editTerrainHeightRadius">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>40</number>
+             </property>
+             <property name="value">
+              <number>7</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QSlider" name="editTerrainHeightHardness">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>50</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QCheckBox" name="editCheckTerrainFixedHeight">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Hauteur fixe</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>50</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>Dureté :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>Attribut :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QDoubleSpinBox" name="editTerrainFixedHeight">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="maximum">
+              <double>999.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>100.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QComboBox" name="editTerrainHeightAttribute">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string>Aucun</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Pas de marche</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Pas de vol</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Pas de mouvement</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Mourir</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_4">
+        <attribute name="title">
+         <string>Texture</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>Rayon :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>Mode :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>Dureté :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>Alpha :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>4</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>50</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>255</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QSlider" name="editTextureRadius">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>40</number>
+           </property>
+           <property name="value">
+            <number>4</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QSlider" name="editTextureHardness">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>50</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QSlider" name="editTextureAlpha">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>255</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QRadioButton" name="editTextureModeNormal">
+           <property name="text">
+            <string>Normal</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QRadioButton" name="editTextureModeEmpty">
+           <property name="text">
+            <string>Vide</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_3">
+        <attribute name="title">
+         <string>Couleur</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="1" column="1">
+          <widget class="QWidget" name="editTerrainTextureColor" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:#7f7f7f;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Dureté :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Rayon : </string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Couleur : </string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QSlider" name="editTextureColorHardness">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>50</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QSlider" name="editTextureColorRadius">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>40</number>
+           </property>
+           <property name="value">
+            <number>4</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>50</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>4</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QPushButton" name="editTerrainChangeTextureColo">
+             <property name="text">
+              <string>Changer</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="editTerrainChangeTextureColorDefault">
+             <property name="text">
+              <string>Défaut</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>Eau et nuages</string>
+        </attribute>
+        <layout class="QFormLayout" name="formLayout">
+         <property name="leftMargin">
+          <number>6</number>
+         </property>
+         <property name="topMargin">
+          <number>6</number>
+         </property>
+         <property name="rightMargin">
+          <number>6</number>
+         </property>
+         <property name="bottomMargin">
+          <number>6</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QRadioButton" name="editTerrainRemoveWater">
+           <property name="text">
+            <string>Enlever</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QRadioButton" name="editTerrainWaterMode">
+           <property name="text">
+            <string>Eau</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QRadioButton" name="editTerrainCloudMode">
+           <property name="text">
+            <string>Nuages</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Texture de l'eau : </string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QComboBox" name="editWaterComboBox">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Hauteur de l'eau : </string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QSpinBox" name="editWaterHeight">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>100</number>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QPushButton" name="optimizeWater">
+           <property name="text">
+            <string>Optimiser</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_15">
+           <property name="text">
+            <string>Taille :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QPushButton" name="waterFillMap">
+           <property name="text">
+            <string>Remplir la map</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>1</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="editWaterSize">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>8</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Calques</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>4</number>
+         </property>
+         <property name="leftMargin">
+          <number>2</number>
+         </property>
+         <property name="topMargin">
+          <number>2</number>
+         </property>
+         <property name="rightMargin">
+          <number>2</number>
+         </property>
+         <property name="bottomMargin">
+          <number>2</number>
+         </property>
+         <item>
+          <widget class="QListWidget" name="editTerrainLayerList">
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="uniformItemSizes">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="editTerrainDeleteLayer">
+           <property name="text">
+            <string>Supprimer</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <widget class="QMenu" name="menuFichiers_r_cents">
+     <property name="title">
+      <string>Fichiers récents...</string>
+     </property>
+    </widget>
+    <widget class="QMenu" name="menuG_n_rer">
+     <property name="title">
+      <string>Générer...</string>
+     </property>
+     <addaction name="actionG_n_rer_les_minimaps"/>
+     <addaction name="actionG_n_rer_une_image"/>
+     <addaction name="actionListe"/>
+    </widget>
+    <addaction name="actionNouveau"/>
+    <addaction name="actionOuvrir"/>
+    <addaction name="menuFichiers_r_cents"/>
+    <addaction name="actionFermer"/>
+    <addaction name="separator"/>
+    <addaction name="actionEnregistrer"/>
+    <addaction name="actionEnregistrer_sous"/>
+    <addaction name="menuG_n_rer"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="action_propos"/>
+    <addaction name="actionQt"/>
+   </widget>
+   <widget class="QMenu" name="menuAffichage">
+    <property name="title">
+     <string>Affichage</string>
+    </property>
+    <widget class="QMenu" name="menuLangage">
+     <property name="title">
+      <string>Langage</string>
+     </property>
+     <property name="icon">
+      <iconset resource="MainFrame.qrc">
+       <normaloff>:/MainFrame/Resources/language.png</normaloff>:/MainFrame/Resources/language.png</iconset>
+     </property>
+     <addaction name="actionFran_ais"/>
+     <addaction name="actionEnglish"/>
+     <addaction name="actionDeutsch"/>
+    </widget>
+    <widget class="QMenu" name="menuAvanc">
+     <property name="title">
+      <string>Avancé</string>
+     </property>
+     <property name="icon">
+      <iconset resource="MainFrame.qrc">
+       <normaloff>:/MainFrame/Resources/settings.png</normaloff>:/MainFrame/Resources/settings.png</iconset>
+     </property>
+     <addaction name="actionChamp_de_vision"/>
+     <addaction name="actionHeure_en_jeu"/>
+     <addaction name="actionLumi_re_d_dition"/>
+     <addaction name="actionBo_te_de_dialogue_pour_les_erreurs"/>
+    </widget>
+    <widget class="QMenu" name="menuTypes_d_objets">
+     <property name="title">
+      <string>Types d'objets</string>
+     </property>
+     <property name="icon">
+      <iconset resource="MainFrame.qrc">
+       <normaloff>:/MainFrame/Resources/showObjects.png</normaloff>:/MainFrame/Resources/showObjects.png</iconset>
+     </property>
+     <addaction name="actionType_Objet"/>
+     <addaction name="actionType_SFX"/>
+     <addaction name="actionType_item"/>
+     <addaction name="actionType_control"/>
+     <addaction name="actionType_mover_monstres"/>
+     <addaction name="actionType_PNJ"/>
+     <addaction name="actionType_Region"/>
+    </widget>
+    <addaction name="actionVue_de_face"/>
+    <addaction name="actionVue_de_c_t"/>
+    <addaction name="separator"/>
+    <addaction name="actionD_placer_cam_ra"/>
+    <addaction name="actionTourner_cam_ra"/>
+    <addaction name="actionZoomer_cam_ra"/>
+    <addaction name="separator"/>
+    <addaction name="actionGrille_des_unit_s"/>
+    <addaction name="actionGrille_des_patchs"/>
+    <addaction name="actionGrille_des_landscapes"/>
+    <addaction name="separator"/>
+    <addaction name="actionSolide"/>
+    <addaction name="actionWireframe"/>
+    <addaction name="separator"/>
+    <addaction name="actionTerrain"/>
+    <addaction name="actionTerrain_LOD"/>
+    <addaction name="actionAttributs_du_terrain"/>
+    <addaction name="actionEau_et_nuages"/>
+    <addaction name="separator"/>
+    <addaction name="actionObjets"/>
+    <addaction name="actionObjets_LOD"/>
+    <addaction name="menuTypes_d_objets"/>
+    <addaction name="actionZones_de_spawn"/>
+    <addaction name="actionNoms_des_movers"/>
+    <addaction name="actionSpawn_complet"/>
+    <addaction name="actionCollisions"/>
+    <addaction name="separator"/>
+    <addaction name="actionLumi_re"/>
+    <addaction name="actionCiel"/>
+    <addaction name="actionBrouillard"/>
+    <addaction name="separator"/>
+    <addaction name="actionAnimer"/>
+    <addaction name="menuLangage"/>
+    <addaction name="menuAvanc"/>
+    <addaction name="actionPlein_cran"/>
+   </widget>
+   <widget class="QMenu" name="menuFen_tres">
+    <property name="title">
+     <string>Fenêtres</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuObjets">
+    <property name="title">
+     <string>Objets</string>
+    </property>
+    <addaction name="actionAjouter_des_objets"/>
+    <addaction name="actionSupprimer_les_objets"/>
+    <addaction name="actionSupprimer_tous_les_objets"/>
+    <addaction name="actionParam_tres_d_ajout_d_objets"/>
+    <addaction name="separator"/>
+    <addaction name="actionS_lectionner_des_objets"/>
+    <addaction name="actionD_placer_les_objets"/>
+    <addaction name="actionTourner_les_objets"/>
+    <addaction name="actionRedimensionner_les_objets"/>
+    <addaction name="separator"/>
+    <addaction name="actionEditX"/>
+    <addaction name="actionEditY"/>
+    <addaction name="actionEditZ"/>
+    <addaction name="actionEditXZ"/>
+    <addaction name="separator"/>
+    <addaction name="actionCacher_les_objets"/>
+    <addaction name="actionCacher_les_objets_au_dessus"/>
+    <addaction name="actionAfficher_tous_les_objets_cach_s"/>
+    <addaction name="separator"/>
+    <addaction name="actionVerrouiller_la_s_lection"/>
+    <addaction name="actionTranslation"/>
+    <addaction name="actionRotation"/>
+    <addaction name="actionRedimension"/>
+    <addaction name="actionTaille_et_rotation_al_atoires"/>
+    <addaction name="actionGravit"/>
+    <addaction name="actionRamener_sur_le_sol"/>
+    <addaction name="actionPlacer_sur_la_grille"/>
+    <addaction name="actionTaille_de_la_grille"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopier"/>
+    <addaction name="actionCouper"/>
+    <addaction name="actionColler"/>
+   </widget>
+   <widget class="QMenu" name="menuTerrain">
+    <property name="title">
+     <string>Terrain</string>
+    </property>
+    <addaction name="actionHauteur_du_terrain"/>
+    <addaction name="actionTexture_du_terrain"/>
+    <addaction name="actionCouleur_du_terrain"/>
+    <addaction name="actionEau_et_nuages_edit"/>
+    <addaction name="actionVertices_du_continent"/>
+   </widget>
+   <widget class="QMenu" name="menuMonde">
+    <property name="title">
+     <string>Monde</string>
+    </property>
+    <addaction name="action_dition_des_continents"/>
+    <addaction name="actionPropri_t_s_du_monde"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuObjets"/>
+   <addaction name="menuTerrain"/>
+   <addaction name="menuMonde"/>
+   <addaction name="menuAffichage"/>
+   <addaction name="menuFen_tres"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>Barre d'options</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>22</width>
+     <height>22</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionGrille_des_unit_s"/>
+   <addaction name="actionGrille_des_patchs"/>
+   <addaction name="actionGrille_des_landscapes"/>
+   <addaction name="separator"/>
+   <addaction name="actionSolide"/>
+   <addaction name="actionWireframe"/>
+   <addaction name="separator"/>
+   <addaction name="actionTerrain"/>
+   <addaction name="actionTerrain_LOD"/>
+   <addaction name="actionAttributs_du_terrain"/>
+   <addaction name="actionEau_et_nuages"/>
+   <addaction name="separator"/>
+   <addaction name="actionObjets"/>
+   <addaction name="actionObjets_LOD"/>
+   <addaction name="actionType_Objet"/>
+   <addaction name="actionType_SFX"/>
+   <addaction name="actionType_item"/>
+   <addaction name="actionType_control"/>
+   <addaction name="actionType_mover_monstres"/>
+   <addaction name="actionType_PNJ"/>
+   <addaction name="actionType_Region"/>
+   <addaction name="separator"/>
+   <addaction name="actionZones_de_spawn"/>
+   <addaction name="actionNoms_des_movers"/>
+   <addaction name="actionSpawn_complet"/>
+   <addaction name="actionCollisions"/>
+   <addaction name="separator"/>
+   <addaction name="actionHeure_en_jeu"/>
+   <addaction name="actionLumi_re"/>
+   <addaction name="actionCiel"/>
+   <addaction name="actionBrouillard"/>
+   <addaction name="actionLumi_re_d_dition"/>
+   <addaction name="separator"/>
+   <addaction name="actionAnimer"/>
+   <addaction name="actionPlein_cran"/>
+   <addaction name="actionVue_de_c_t"/>
+   <addaction name="actionVue_de_face"/>
+  </widget>
+  <widget class="QDockWidget" name="dockPatrolEditor">
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Chemins</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_4">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <property name="leftMargin">
+      <number>4</number>
+     </property>
+     <property name="topMargin">
+      <number>4</number>
+     </property>
+     <property name="rightMargin">
+      <number>4</number>
+     </property>
+     <property name="bottomMargin">
+      <number>4</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QPushButton" name="addPatrol">
+         <property name="text">
+          <string>Nouveau</string>
+         </property>
+         <property name="icon">
+          <iconset resource="MainFrame.qrc">
+           <normaloff>:/MainFrame/Resources/add.png</normaloff>:/MainFrame/Resources/add.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="removePatrol">
+         <property name="text">
+          <string>Supprimer</string>
+         </property>
+         <property name="icon">
+          <iconset resource="MainFrame.qrc">
+           <normaloff>:/MainFrame/Resources/remove.png</normaloff>:/MainFrame/Resources/remove.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QListWidget" name="patrolList">
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionNouveau">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/new.png</normaloff>:/MainFrame/Resources/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nouveau</string>
+   </property>
+  </action>
+  <action name="actionOuvrir">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/open.png</normaloff>:/MainFrame/Resources/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ouvrir</string>
+   </property>
+  </action>
+  <action name="actionFermer">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/close.png</normaloff>:/MainFrame/Resources/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fermer</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/save.png</normaloff>:/MainFrame/Resources/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enregistrer</string>
+   </property>
+   <property name="toolTip">
+    <string>Enregistrer</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer_sous">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/save_as.png</normaloff>:/MainFrame/Resources/save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enregistrer sous...</string>
+   </property>
+   <property name="toolTip">
+    <string>Enregistrer sous</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/quit.png</normaloff>:/MainFrame/Resources/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="action_propos">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/about.png</normaloff>:/MainFrame/Resources/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>À propos</string>
+   </property>
+  </action>
+  <action name="actionQt">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/about.png</normaloff>:/MainFrame/Resources/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>Qt</string>
+   </property>
+  </action>
+  <action name="actionPlein_cran">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/fullscreen.png</normaloff>:/MainFrame/Resources/fullscreen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Plein écran</string>
+   </property>
+  </action>
+  <action name="actionTerrain">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showTerrain.png</normaloff>:/MainFrame/Resources/showTerrain.png</iconset>
+   </property>
+   <property name="text">
+    <string>Terrain</string>
+   </property>
+  </action>
+  <action name="actionTerrain_LOD">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/terrainLOD.png</normaloff>:/MainFrame/Resources/terrainLOD.png</iconset>
+   </property>
+   <property name="text">
+    <string>Terrain LOD</string>
+   </property>
+  </action>
+  <action name="actionEau_et_nuages">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showWater.png</normaloff>:/MainFrame/Resources/showWater.png</iconset>
+   </property>
+   <property name="text">
+    <string>Eau et nuages</string>
+   </property>
+  </action>
+  <action name="actionAnimer">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/animate.png</normaloff>:/MainFrame/Resources/animate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Animer</string>
+   </property>
+  </action>
+  <action name="actionAttributs_du_terrain">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showAttributes.png</normaloff>:/MainFrame/Resources/showAttributes.png</iconset>
+   </property>
+   <property name="text">
+    <string>Attributs du terrain</string>
+   </property>
+  </action>
+  <action name="actionGrille_des_landscapes">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/gridLand.png</normaloff>:/MainFrame/Resources/gridLand.png</iconset>
+   </property>
+   <property name="text">
+    <string>Grille des landscapes</string>
+   </property>
+  </action>
+  <action name="actionGrille_des_patchs">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/gridPatch.png</normaloff>:/MainFrame/Resources/gridPatch.png</iconset>
+   </property>
+   <property name="text">
+    <string>Grille des patchs</string>
+   </property>
+  </action>
+  <action name="actionGrille_des_unit_s">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/gridUnity.png</normaloff>:/MainFrame/Resources/gridUnity.png</iconset>
+   </property>
+   <property name="text">
+    <string>Grille des unités</string>
+   </property>
+  </action>
+  <action name="actionLumi_re">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/light.png</normaloff>:/MainFrame/Resources/light.png</iconset>
+   </property>
+   <property name="text">
+    <string>Lumière</string>
+   </property>
+  </action>
+  <action name="actionBrouillard">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/fog.png</normaloff>:/MainFrame/Resources/fog.png</iconset>
+   </property>
+   <property name="text">
+    <string>Brouillard</string>
+   </property>
+  </action>
+  <action name="actionHeure_en_jeu">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/gametime.png</normaloff>:/MainFrame/Resources/gametime.png</iconset>
+   </property>
+   <property name="text">
+    <string>Heure en jeu</string>
+   </property>
+  </action>
+  <action name="actionCiel">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/sky.png</normaloff>:/MainFrame/Resources/sky.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ciel</string>
+   </property>
+  </action>
+  <action name="actionObjets">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showObjects.png</normaloff>:/MainFrame/Resources/showObjects.png</iconset>
+   </property>
+   <property name="text">
+    <string>Objets</string>
+   </property>
+  </action>
+  <action name="actionType_mover_monstres">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showDynamicObjects.png</normaloff>:/MainFrame/Resources/showDynamicObjects.png</iconset>
+   </property>
+   <property name="text">
+    <string>Type mover (monstres)</string>
+   </property>
+  </action>
+  <action name="actionType_Objet">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showStaticObjects.png</normaloff>:/MainFrame/Resources/showStaticObjects.png</iconset>
+   </property>
+   <property name="text">
+    <string>Type objet</string>
+   </property>
+  </action>
+  <action name="actionType_Region">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showRegions.png</normaloff>:/MainFrame/Resources/showRegions.png</iconset>
+   </property>
+   <property name="text">
+    <string>Type région</string>
+   </property>
+  </action>
+  <action name="actionZones_de_spawn">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showSpawnZones.png</normaloff>:/MainFrame/Resources/showSpawnZones.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zones de spawn</string>
+   </property>
+  </action>
+  <action name="actionNoms_des_movers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/moverNames.png</normaloff>:/MainFrame/Resources/moverNames.png</iconset>
+   </property>
+   <property name="text">
+    <string>Noms des movers</string>
+   </property>
+  </action>
+  <action name="actionObjets_LOD">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/objectsLOD.png</normaloff>:/MainFrame/Resources/objectsLOD.png</iconset>
+   </property>
+   <property name="text">
+    <string>Objets LOD</string>
+   </property>
+  </action>
+  <action name="actionSpawn_complet">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/spawnMonsters.png</normaloff>:/MainFrame/Resources/spawnMonsters.png</iconset>
+   </property>
+   <property name="text">
+    <string>Simulation des spawns</string>
+   </property>
+  </action>
+  <action name="actionVue_de_face">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/top_view.png</normaloff>:/MainFrame/Resources/top_view.png</iconset>
+   </property>
+   <property name="text">
+    <string>Vue d'en haut</string>
+   </property>
+  </action>
+  <action name="actionVue_de_c_t">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/side_view.png</normaloff>:/MainFrame/Resources/side_view.png</iconset>
+   </property>
+   <property name="text">
+    <string>Vue de face</string>
+   </property>
+  </action>
+  <action name="actionG_n_rer_une_image">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/picture.png</normaloff>:/MainFrame/Resources/picture.png</iconset>
+   </property>
+   <property name="text">
+    <string>Bigmap</string>
+   </property>
+  </action>
+  <action name="actionType_PNJ">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showNPC.png</normaloff>:/MainFrame/Resources/showNPC.png</iconset>
+   </property>
+   <property name="text">
+    <string>Type mover (PNJ)</string>
+   </property>
+  </action>
+  <action name="actionType_item">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showItem.png</normaloff>:/MainFrame/Resources/showItem.png</iconset>
+   </property>
+   <property name="text">
+    <string>Type item</string>
+   </property>
+  </action>
+  <action name="actionType_control">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showCtrl.png</normaloff>:/MainFrame/Resources/showCtrl.png</iconset>
+   </property>
+   <property name="text">
+    <string>Type control</string>
+   </property>
+  </action>
+  <action name="actionType_SFX">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showSFX.png</normaloff>:/MainFrame/Resources/showSFX.png</iconset>
+   </property>
+   <property name="text">
+    <string>Type SFX</string>
+   </property>
+  </action>
+  <action name="actionCollisions">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/showCollision.png</normaloff>:/MainFrame/Resources/showCollision.png</iconset>
+   </property>
+   <property name="text">
+    <string>Collisions</string>
+   </property>
+  </action>
+  <action name="actionHauteur_du_terrain">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/edit_terrainHeight.png</normaloff>:/MainFrame/Resources/edit_terrainHeight.png</iconset>
+   </property>
+   <property name="text">
+    <string>Hauteur du terrain</string>
+   </property>
+  </action>
+  <action name="actionTexture_du_terrain">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/edit_texture.png</normaloff>:/MainFrame/Resources/edit_texture.png</iconset>
+   </property>
+   <property name="text">
+    <string>Texture du terrain</string>
+   </property>
+  </action>
+  <action name="actionCouleur_du_terrain">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/edit_terrainColor.png</normaloff>:/MainFrame/Resources/edit_terrainColor.png</iconset>
+   </property>
+   <property name="text">
+    <string>Couleur du terrain</string>
+   </property>
+  </action>
+  <action name="actionEau_et_nuages_edit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/edit_terrainWater.png</normaloff>:/MainFrame/Resources/edit_terrainWater.png</iconset>
+   </property>
+   <property name="text">
+    <string>Eau et nuages</string>
+   </property>
+  </action>
+  <action name="actionPropri_t_s_du_monde">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/settings.png</normaloff>:/MainFrame/Resources/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Propriétés du monde</string>
+   </property>
+  </action>
+  <action name="action_dition_des_continents">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/edit_continents.png</normaloff>:/MainFrame/Resources/edit_continents.png</iconset>
+   </property>
+   <property name="text">
+    <string>Édition des continents</string>
+   </property>
+  </action>
+  <action name="actionVertices_du_continent">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/edit_continentLines.png</normaloff>:/MainFrame/Resources/edit_continentLines.png</iconset>
+   </property>
+   <property name="text">
+    <string>Vertices du continent</string>
+   </property>
+  </action>
+  <action name="actionAjouter_des_objets">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/addObj.png</normaloff>:/MainFrame/Resources/addObj.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ajouter des objets</string>
+   </property>
+  </action>
+  <action name="actionS_lectionner_des_objets">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/objSelect.png</normaloff>:/MainFrame/Resources/objSelect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sélectionner des objets</string>
+   </property>
+  </action>
+  <action name="actionD_placer_les_objets">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/move.png</normaloff>:/MainFrame/Resources/move.png</iconset>
+   </property>
+   <property name="text">
+    <string>Déplacer les objets</string>
+   </property>
+  </action>
+  <action name="actionTourner_les_objets">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/rotate.png</normaloff>:/MainFrame/Resources/rotate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tourner les objets</string>
+   </property>
+  </action>
+  <action name="actionRedimensionner_les_objets">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/resize.png</normaloff>:/MainFrame/Resources/resize.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redimensionner les objets</string>
+   </property>
+  </action>
+  <action name="actionEditX">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/X.png</normaloff>:/MainFrame/Resources/X.png</iconset>
+   </property>
+   <property name="text">
+    <string>X</string>
+   </property>
+   <property name="toolTip">
+    <string>Éditer sur l'axe X</string>
+   </property>
+  </action>
+  <action name="actionEditY">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/Y.png</normaloff>:/MainFrame/Resources/Y.png</iconset>
+   </property>
+   <property name="text">
+    <string>Y</string>
+   </property>
+   <property name="toolTip">
+    <string>Éditer sur l'axe Y</string>
+   </property>
+  </action>
+  <action name="actionEditZ">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/Z.png</normaloff>:/MainFrame/Resources/Z.png</iconset>
+   </property>
+   <property name="text">
+    <string>Z</string>
+   </property>
+   <property name="toolTip">
+    <string>Éditer sur l'axe Z</string>
+   </property>
+  </action>
+  <action name="actionEditXZ">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/XZ.png</normaloff>:/MainFrame/Resources/XZ.png</iconset>
+   </property>
+   <property name="text">
+    <string>XZ</string>
+   </property>
+   <property name="toolTip">
+    <string>Éditer sur les axes X et Z</string>
+   </property>
+  </action>
+  <action name="actionVerrouiller_la_s_lection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/lock.png</normaloff>:/MainFrame/Resources/lock.png</iconset>
+   </property>
+   <property name="text">
+    <string>Verrouiller la sélection</string>
+   </property>
+  </action>
+  <action name="actionRamener_sur_le_sol">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/set_on_land.png</normaloff>:/MainFrame/Resources/set_on_land.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ramener sur le sol</string>
+   </property>
+   <property name="toolTip">
+    <string>Ramener sur le sol</string>
+   </property>
+  </action>
+  <action name="actionPlacer_sur_la_grille">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/grid.png</normaloff>:/MainFrame/Resources/grid.png</iconset>
+   </property>
+   <property name="text">
+    <string>Placer sur la grille</string>
+   </property>
+  </action>
+  <action name="actionTaille_de_la_grille">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/precision.png</normaloff>:/MainFrame/Resources/precision.png</iconset>
+   </property>
+   <property name="text">
+    <string>Taille de la grille</string>
+   </property>
+  </action>
+  <action name="actionTaille_et_rotation_al_atoires">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/random.png</normaloff>:/MainFrame/Resources/random.png</iconset>
+   </property>
+   <property name="text">
+    <string>Taille et rotation aléatoires</string>
+   </property>
+  </action>
+  <action name="actionCopier">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/copy.png</normaloff>:/MainFrame/Resources/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copier</string>
+   </property>
+  </action>
+  <action name="actionCouper">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/cut.png</normaloff>:/MainFrame/Resources/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Couper</string>
+   </property>
+  </action>
+  <action name="actionColler">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/paste.png</normaloff>:/MainFrame/Resources/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Coller</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_les_objets">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/remove.png</normaloff>:/MainFrame/Resources/remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>Supprimer les objets</string>
+   </property>
+  </action>
+  <action name="actionCacher_les_objets">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/hide.png</normaloff>:/MainFrame/Resources/hide.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cacher les objets</string>
+   </property>
+  </action>
+  <action name="actionAfficher_tous_les_objets_cach_s">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/show.png</normaloff>:/MainFrame/Resources/show.png</iconset>
+   </property>
+   <property name="text">
+    <string>Afficher tous les objets cachés</string>
+   </property>
+  </action>
+  <action name="actionCacher_les_objets_au_dessus">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/hide.png</normaloff>:/MainFrame/Resources/hide.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cacher les objets au dessus</string>
+   </property>
+  </action>
+  <action name="actionFran_ais">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/language_french.png</normaloff>:/MainFrame/Resources/language_french.png</iconset>
+   </property>
+   <property name="text">
+    <string>Français</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/language_english.png</normaloff>:/MainFrame/Resources/language_english.png</iconset>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionGravit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/gravity.png</normaloff>:/MainFrame/Resources/gravity.png</iconset>
+   </property>
+   <property name="text">
+    <string>Gravité</string>
+   </property>
+  </action>
+  <action name="actionBo_te_de_dialogue_pour_les_erreurs">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/msgbox.png</normaloff>:/MainFrame/Resources/msgbox.png</iconset>
+   </property>
+   <property name="text">
+    <string>Boîte de dialogue pour les erreurs</string>
+   </property>
+  </action>
+  <action name="actionG_n_rer_les_minimaps">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/picture.png</normaloff>:/MainFrame/Resources/picture.png</iconset>
+   </property>
+   <property name="text">
+    <string>Minimaps</string>
+   </property>
+  </action>
+  <action name="actionListe">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/list.png</normaloff>:/MainFrame/Resources/list.png</iconset>
+   </property>
+   <property name="text">
+    <string>Liste</string>
+   </property>
+  </action>
+  <action name="actionTranslation">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/move.png</normaloff>:/MainFrame/Resources/move.png</iconset>
+   </property>
+   <property name="text">
+    <string>Translation</string>
+   </property>
+  </action>
+  <action name="actionRotation">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/rotate.png</normaloff>:/MainFrame/Resources/rotate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotation</string>
+   </property>
+  </action>
+  <action name="actionDeutsch">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/language_german.png</normaloff>:/MainFrame/Resources/language_german.png</iconset>
+   </property>
+   <property name="text">
+    <string>Deutsch</string>
+   </property>
+  </action>
+  <action name="actionAnnuler">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/undo.png</normaloff>:/MainFrame/Resources/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Annuler</string>
+   </property>
+  </action>
+  <action name="actionR_tablir">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/redo.png</normaloff>:/MainFrame/Resources/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rétablir</string>
+   </property>
+  </action>
+  <action name="actionLumi_re_d_dition">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/edition_light.png</normaloff>:/MainFrame/Resources/edition_light.png</iconset>
+   </property>
+   <property name="text">
+    <string>Lumière d'édition</string>
+   </property>
+  </action>
+  <action name="actionRedimension">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/resize.png</normaloff>:/MainFrame/Resources/resize.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redimension</string>
+   </property>
+  </action>
+  <action name="actionParam_tres_d_ajout_d_objets">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/settings.png</normaloff>:/MainFrame/Resources/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Paramètres d'ajout d'objets</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_tous_les_objets">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/remove.png</normaloff>:/MainFrame/Resources/remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>Supprimer tous les objets</string>
+   </property>
+  </action>
+  <action name="actionSolide">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/fill_solid.png</normaloff>:/MainFrame/Resources/fill_solid.png</iconset>
+   </property>
+   <property name="text">
+    <string>Solide</string>
+   </property>
+  </action>
+  <action name="actionWireframe">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/fill_line.png</normaloff>:/MainFrame/Resources/fill_line.png</iconset>
+   </property>
+   <property name="text">
+    <string>Wireframe</string>
+   </property>
+  </action>
+  <action name="actionChamp_de_vision">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/farPlane.png</normaloff>:/MainFrame/Resources/farPlane.png</iconset>
+   </property>
+   <property name="text">
+    <string>Champ de vision</string>
+   </property>
+  </action>
+  <action name="actionD_placer_cam_ra">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/moveCamera.png</normaloff>:/MainFrame/Resources/moveCamera.png</iconset>
+   </property>
+   <property name="text">
+    <string>Déplacer caméra</string>
+   </property>
+  </action>
+  <action name="actionTourner_cam_ra">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/rotateCamera.png</normaloff>:/MainFrame/Resources/rotateCamera.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tourner caméra</string>
+   </property>
+  </action>
+  <action name="actionZoomer_cam_ra">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/zoomCamera.png</normaloff>:/MainFrame/Resources/zoomCamera.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoomer caméra</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CGameElementsTree</class>
+   <extends>QTreeView</extends>
+   <header location="global">GameElementsTree.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="MainFrame.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionQuitter</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainFrameClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editTextureColorRadius</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_7</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1266</x>
+     <y>490</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1024</x>
+     <y>490</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editTextureColorHardness</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_6</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1266</x>
+     <y>624</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1024</x>
+     <y>624</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editTerrainWaterMode</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>editWaterComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>959</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1269</x>
+     <y>283</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editTerrainWaterMode</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>editWaterHeight</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>959</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1269</x>
+     <y>309</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editCheckTerrainFixedHeight</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>editTerrainFixedHeight</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1005</x>
+     <y>673</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1265</x>
+     <y>670</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkTerrainBrush2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>editCheckTerrainFixedHeight</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1056</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1005</x>
+     <y>673</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkTerrainBrush5</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>editTerrainHeightAttribute</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1263</x>
+     <y>282</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1265</x>
+     <y>713</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editTerrainHeightRadius</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_17</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1117</x>
+     <y>579</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1031</x>
+     <y>594</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editTerrainHeightHardness</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_19</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1129</x>
+     <y>617</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1031</x>
+     <y>634</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editTextureRadius</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_12</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1266</x>
+     <y>417</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1010</x>
+     <y>417</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editTextureHardness</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_13</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1266</x>
+     <y>531</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1010</x>
+     <y>531</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editTextureAlpha</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_14</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1266</x>
+     <y>645</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1010</x>
+     <y>645</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkTerrainBrush2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>editTerrainHeightHardness</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1056</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1193</x>
+     <y>617</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editWaterSize</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_21</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1084</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1019</x>
+     <y>328</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

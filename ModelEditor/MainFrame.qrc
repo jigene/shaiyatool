@@ -1,0 +1,37 @@
+<RCC>
+  <qresource prefix="MainFrame">
+    <file>Resources/lod1.png</file>
+    <file>Resources/lod2.png</file>
+    <file>Resources/lod3.png</file>
+    <file>Resources/Coll.png</file>
+    <file>Resources/cw_ccw.png</file>
+    <file>Resources/Skin.png</file>
+    <file>Resources/pause.png</file>
+    <file>Resources/about.png</file>
+    <file>Resources/background_color.png</file>
+    <file>Resources/bones.png</file>
+    <file>Resources/close.png</file>
+    <file>Resources/collision.png</file>
+    <file>Resources/fill_line.png</file>
+    <file>Resources/fill_point.png</file>
+    <file>Resources/fill_solid.png</file>
+    <file>Resources/fullscreen.png</file>
+    <file>Resources/grid.png</file>
+    <file>Resources/language.png</file>
+    <file>Resources/model.png</file>
+    <file>Resources/open.png</file>
+    <file>Resources/play.png</file>
+    <file>Resources/quit.png</file>
+    <file>Resources/save_as.png</file>
+    <file>Resources/scale.png</file>
+    <file>Resources/settings.png</file>
+    <file>Resources/stop.png</file>
+    <file>Resources/texture.png</file>
+    <file>Resources/volume.png</file>
+    <file>Resources/ModelEditor.png</file>
+    <file>..\Resources\language_english.png</file>
+    <file>..\Resources\language_french.png</file>
+    <file>..\Resources\language_german.png</file>
+    
+  </qresource>
+</RCC>

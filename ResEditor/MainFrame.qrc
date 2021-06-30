@@ -1,0 +1,32 @@
+<RCC>
+  <qresource prefix="MainFrame">
+    <file>Resources/size.png</file>
+    <file>Resources/sort.png</file>
+    <file>Resources/language.png</file>
+    <file>Resources/ResEditor.png</file>
+    <file>..\Resources\language_english.png</file>
+    <file>..\Resources\language_french.png</file>
+    <file>..\Resources\language_german.png</file>
+    
+    <file>Resources/code.png</file>
+    <file>Resources/csv.png</file>
+    <file>Resources/default.png</file>
+    <file>Resources/about.png</file>
+    <file>Resources/add.png</file>
+    <file>Resources/close.png</file>
+    <file>Resources/extract.png</file>
+    <file>Resources/fullscreen.png</file>
+    <file>Resources/key.png</file>
+    <file>Resources/lock.png</file>
+    <file>Resources/new.png</file>
+    <file>Resources/open.png</file>
+    <file>Resources/quit.png</file>
+    <file>Resources/remove.png</file>
+    <file>Resources/save.png</file>
+    <file>Resources/save_as.png</file>
+    <file>Resources/header.png</file>
+    <file>Resources/system.png</file>
+    <file>Resources/picture.png</file>
+    <file>Resources/text.png</file>
+  </qresource>
+</RCC>

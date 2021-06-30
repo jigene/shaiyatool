@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CMainFrameClass</class>
+ <widget class="QMainWindow" name="CMainFrameClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>GUIEditor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MainFrame.qrc">
+    <normaloff>:/MainFrame/Resources/GUIEditor.png</normaloff>:/MainFrame/Resources/GUIEditor.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionEnregistrer"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menuAffichage">
+    <property name="title">
+     <string>Affichage</string>
+    </property>
+    <widget class="QMenu" name="menuLangage">
+     <property name="title">
+      <string>Langage</string>
+     </property>
+     <property name="icon">
+      <iconset resource="MainFrame.qrc">
+       <normaloff>:/MainFrame/Resources/language.png</normaloff>:/MainFrame/Resources/language.png</iconset>
+     </property>
+     <addaction name="actionFran_ais"/>
+     <addaction name="actionEnglish"/>
+     <addaction name="actionDeutsch"/>
+    </widget>
+    <addaction name="actionGrille"/>
+    <addaction name="actionCouleur_du_fond"/>
+    <addaction name="separator"/>
+    <addaction name="menuLangage"/>
+    <addaction name="actionPlein_cran"/>
+   </widget>
+   <widget class="QMenu" name="menuFen_tres">
+    <property name="title">
+     <string>Fenêtres</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="action_propos"/>
+    <addaction name="actionQt"/>
+   </widget>
+   <widget class="QMenu" name="menu_dition">
+    <property name="title">
+     <string>Édition</string>
+    </property>
+    <addaction name="actionCopier"/>
+    <addaction name="actionCouper"/>
+    <addaction name="actionColler"/>
+    <addaction name="separator"/>
+    <addaction name="actionNouvelle_fen_tre"/>
+    <addaction name="actionSupprimer_le_control"/>
+    <addaction name="separator"/>
+    <addaction name="actionAligner_gauche"/>
+    <addaction name="actionAligner_droite"/>
+    <addaction name="actionAligner_en_haut"/>
+    <addaction name="actionAligner_en_bas"/>
+    <addaction name="actionRamener_au_premier_plan"/>
+    <addaction name="separator"/>
+    <addaction name="actionCling"/>
+    <addaction name="actionPr_cision_de_l_diteur"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menu_dition"/>
+   <addaction name="menuAffichage"/>
+   <addaction name="menuFen_tres"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Barre d'outils</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionEnregistrer"/>
+   <addaction name="separator"/>
+   <addaction name="actionGrille"/>
+   <addaction name="actionCling"/>
+   <addaction name="actionPr_cision_de_l_diteur"/>
+   <addaction name="separator"/>
+   <addaction name="actionAligner_gauche"/>
+   <addaction name="actionAligner_droite"/>
+   <addaction name="actionAligner_en_haut"/>
+   <addaction name="actionAligner_en_bas"/>
+   <addaction name="actionRamener_au_premier_plan"/>
+   <addaction name="separator"/>
+   <addaction name="actionNouvelle_fen_tre"/>
+   <addaction name="actionSupprimer_le_control"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="styleSheet">
+    <string notr="true">background-color: #a29314;</string>
+   </property>
+  </widget>
+  <widget class="QDockWidget" name="dockWindows">
+   <property name="windowTitle">
+    <string>Liste des fenêtres</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>4</number>
+     </property>
+     <property name="leftMargin">
+      <number>2</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>2</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="btnAddWindow">
+         <property name="text">
+          <string>Ajouter</string>
+         </property>
+         <property name="icon">
+          <iconset resource="MainFrame.qrc">
+           <normaloff>:/MainFrame/Resources/new.png</normaloff>:/MainFrame/Resources/new.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRemoveWindow">
+         <property name="text">
+          <string>Supprimer</string>
+         </property>
+         <property name="icon">
+          <iconset resource="MainFrame.qrc">
+           <normaloff>:/MainFrame/Resources/delete.png</normaloff>:/MainFrame/Resources/delete.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QListView" name="listWindows">
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="viewMode">
+        <enum>QListView::ListMode</enum>
+       </property>
+       <property name="uniformItemSizes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockEdit">
+   <property name="windowTitle">
+    <string>Édition du control</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>4</number>
+     </property>
+     <property name="leftMargin">
+      <number>2</number>
+     </property>
+     <property name="topMargin">
+      <number>2</number>
+     </property>
+     <property name="rightMargin">
+      <number>2</number>
+     </property>
+     <property name="bottomMargin">
+      <number>2</number>
+     </property>
+     <item>
+      <widget class="QGroupBox" name="groupEditGeneral">
+       <property name="title">
+        <string>Général</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+        </property>
+        <property name="horizontalSpacing">
+         <number>4</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>4</number>
+        </property>
+        <property name="leftMargin">
+         <number>6</number>
+        </property>
+        <property name="topMargin">
+         <number>4</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
+         <number>4</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>ID :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="editControlID">
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <property name="maxVisibleItems">
+           <number>20</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Taille :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QSpinBox" name="editControlWidth">
+            <property name="prefix">
+             <string>Largeur: </string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>9999</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="editControlHeight">
+            <property name="prefix">
+             <string>Hauteur: </string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>9999</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Texte :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="editControlText"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Infobulle :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="editControlTooltip"/>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Texture :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLineEdit" name="editControlTexture"/>
+        </item>
+        <item row="8" column="0">
+         <widget class="QPushButton" name="btnSelectTexture">
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QPushButton" name="btnAdaptSizeToTexture">
+          <property name="text">
+           <string>Adapter la taille</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <widget class="QCheckBox" name="editControlNoDrawFrame">
+          <property name="text">
+           <string>Pas de dessin de la frame</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="0">
+         <widget class="QCheckBox" name="editControlTiles">
+          <property name="text">
+           <string>Tuiles</string>
+          </property>
+          <property name="tristate">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupEditControl">
+       <property name="title">
+        <string>Control</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="leftMargin">
+         <number>6</number>
+        </property>
+        <property name="topMargin">
+         <number>4</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
+         <number>4</number>
+        </property>
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <item row="2" column="1">
+         <widget class="QCheckBox" name="editControlEnabled">
+          <property name="text">
+           <string>Activé</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QCheckBox" name="editControlVisible">
+          <property name="text">
+           <string>Visible</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QCheckBox" name="editControlTabStop">
+          <property name="text">
+           <string>Tab stop</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Position :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="editControlX">
+          <property name="suffix">
+           <string/>
+          </property>
+          <property name="prefix">
+           <string>X: </string>
+          </property>
+          <property name="minimum">
+           <number>-9999</number>
+          </property>
+          <property name="maximum">
+           <number>9999</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QSpinBox" name="editControlY">
+          <property name="prefix">
+           <string>Y: </string>
+          </property>
+          <property name="minimum">
+           <number>-9999</number>
+          </property>
+          <property name="maximum">
+           <number>9999</number>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QCheckBox" name="editControlGroup">
+          <property name="text">
+           <string>Group</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QCheckBox" name="editControlScrollBar">
+          <property name="text">
+           <string>ScrollBar</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="3">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QGroupBox" name="groupEditHAlign">
+            <property name="title">
+             <string>Alignement horizontal</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <property name="spacing">
+              <number>4</number>
+             </property>
+             <property name="leftMargin">
+              <number>6</number>
+             </property>
+             <property name="topMargin">
+              <number>4</number>
+             </property>
+             <property name="rightMargin">
+              <number>6</number>
+             </property>
+             <property name="bottomMargin">
+              <number>4</number>
+             </property>
+             <item>
+              <widget class="QRadioButton" name="editHAlignLeft">
+               <property name="text">
+                <string>Gauche</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="editHAlignCenter">
+               <property name="text">
+                <string>Centre</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="editHAlignRight">
+               <property name="text">
+                <string>Droite</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupEditVAlign">
+            <property name="title">
+             <string>Alignement vertical</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="spacing">
+              <number>4</number>
+             </property>
+             <property name="leftMargin">
+              <number>6</number>
+             </property>
+             <property name="topMargin">
+              <number>4</number>
+             </property>
+             <property name="rightMargin">
+              <number>6</number>
+             </property>
+             <property name="bottomMargin">
+              <number>4</number>
+             </property>
+             <item>
+              <widget class="QRadioButton" name="editVAlignTop">
+               <property name="text">
+                <string>Haut</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="editVAlignMiddle">
+               <property name="text">
+                <string>Milieu</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="editVAlignBottom">
+               <property name="text">
+                <string>Bas</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>Couleur :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QWidget" name="editControlViewColor" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: #7f7f7f;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="editControlColor">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Changer</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupEditWindow">
+       <property name="title">
+        <string>Fenêtre</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>6</number>
+        </property>
+        <property name="topMargin">
+         <number>4</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
+         <number>4</number>
+        </property>
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Format :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="editWindowD3DFormat">
+          <item>
+           <property name="text">
+            <string>A4R4G4B4</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>A8R8G8B8</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QCheckBox" name="editWindowCaption">
+          <property name="text">
+           <string>Barre de titre</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="editWindowNoFrame">
+          <property name="text">
+           <string>Pas de bordures</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Icone :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="editWindowIcon">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>Controls</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>RightToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionX"/>
+   <addaction name="actionText"/>
+   <addaction name="actionPicture"/>
+   <addaction name="actionStatic"/>
+   <addaction name="actionText_Edit"/>
+   <addaction name="actionGroupBox"/>
+   <addaction name="actionButton"/>
+   <addaction name="actionCheckBox"/>
+   <addaction name="actionRadioButton"/>
+   <addaction name="actionComboBox"/>
+   <addaction name="actionListBox"/>
+   <addaction name="actionListCtrl"/>
+   <addaction name="actionTreeCtrl"/>
+   <addaction name="actionTabCtrl"/>
+   <addaction name="actionCustom"/>
+  </widget>
+  <action name="actionEnregistrer">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/save.png</normaloff>:/MainFrame/Resources/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enregistrer</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/quit.png</normaloff>:/MainFrame/Resources/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="action_propos">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/about.png</normaloff>:/MainFrame/Resources/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>À propos</string>
+   </property>
+  </action>
+  <action name="actionQt">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/about.png</normaloff>:/MainFrame/Resources/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>Qt</string>
+   </property>
+  </action>
+  <action name="actionPlein_cran">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/fullscreen.png</normaloff>:/MainFrame/Resources/fullscreen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Plein écran</string>
+   </property>
+  </action>
+  <action name="actionAligner_en_haut">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/align_top.png</normaloff>:/MainFrame/Resources/align_top.png</iconset>
+   </property>
+   <property name="text">
+    <string>Aligner en haut</string>
+   </property>
+  </action>
+  <action name="actionAligner_en_bas">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/align_bottom.png</normaloff>:/MainFrame/Resources/align_bottom.png</iconset>
+   </property>
+   <property name="text">
+    <string>Aligner en bas</string>
+   </property>
+  </action>
+  <action name="actionAligner_gauche">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/align_left.png</normaloff>:/MainFrame/Resources/align_left.png</iconset>
+   </property>
+   <property name="text">
+    <string>Aligner à gauche</string>
+   </property>
+  </action>
+  <action name="actionAligner_droite">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/align_right.png</normaloff>:/MainFrame/Resources/align_right.png</iconset>
+   </property>
+   <property name="text">
+    <string>Aligner à droite</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_le_control">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/delete.png</normaloff>:/MainFrame/Resources/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Supprimer le control</string>
+   </property>
+  </action>
+  <action name="actionGrille">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/grid.png</normaloff>:/MainFrame/Resources/grid.png</iconset>
+   </property>
+   <property name="text">
+    <string>Grille</string>
+   </property>
+  </action>
+  <action name="actionCling">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/cling.png</normaloff>:/MainFrame/Resources/cling.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cling</string>
+   </property>
+  </action>
+  <action name="actionNouvelle_fen_tre">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/new.png</normaloff>:/MainFrame/Resources/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nouvelle fenêtre</string>
+   </property>
+  </action>
+  <action name="actionText">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/text.png</normaloff>:/MainFrame/Resources/text.png</iconset>
+   </property>
+   <property name="text">
+    <string>Text</string>
+   </property>
+  </action>
+  <action name="actionPicture">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/picture.png</normaloff>:/MainFrame/Resources/picture.png</iconset>
+   </property>
+   <property name="text">
+    <string>Picture</string>
+   </property>
+  </action>
+  <action name="actionStatic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/static.png</normaloff>:/MainFrame/Resources/static.png</iconset>
+   </property>
+   <property name="text">
+    <string>Static</string>
+   </property>
+  </action>
+  <action name="actionText_Edit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/textEdit.png</normaloff>:/MainFrame/Resources/textEdit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Text Edit</string>
+   </property>
+  </action>
+  <action name="actionGroupBox">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/groupBox.png</normaloff>:/MainFrame/Resources/groupBox.png</iconset>
+   </property>
+   <property name="text">
+    <string>GroupBox</string>
+   </property>
+  </action>
+  <action name="actionButton">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/button.png</normaloff>:/MainFrame/Resources/button.png</iconset>
+   </property>
+   <property name="text">
+    <string>Button</string>
+   </property>
+  </action>
+  <action name="actionCheckBox">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/checkBox.png</normaloff>:/MainFrame/Resources/checkBox.png</iconset>
+   </property>
+   <property name="text">
+    <string>CheckBox</string>
+   </property>
+  </action>
+  <action name="actionRadioButton">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/radioButton.png</normaloff>:/MainFrame/Resources/radioButton.png</iconset>
+   </property>
+   <property name="text">
+    <string>RadioButton</string>
+   </property>
+  </action>
+  <action name="actionComboBox">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/comboBox.png</normaloff>:/MainFrame/Resources/comboBox.png</iconset>
+   </property>
+   <property name="text">
+    <string>ComboBox</string>
+   </property>
+  </action>
+  <action name="actionListBox">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/listBox.png</normaloff>:/MainFrame/Resources/listBox.png</iconset>
+   </property>
+   <property name="text">
+    <string>ListBox</string>
+   </property>
+  </action>
+  <action name="actionListCtrl">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/listCtrl.png</normaloff>:/MainFrame/Resources/listCtrl.png</iconset>
+   </property>
+   <property name="text">
+    <string>ListCtrl</string>
+   </property>
+  </action>
+  <action name="actionTreeCtrl">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/treeCtrl.png</normaloff>:/MainFrame/Resources/treeCtrl.png</iconset>
+   </property>
+   <property name="text">
+    <string>TreeCtrl</string>
+   </property>
+  </action>
+  <action name="actionTabCtrl">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/tabCtrl.png</normaloff>:/MainFrame/Resources/tabCtrl.png</iconset>
+   </property>
+   <property name="text">
+    <string>TabCtrl</string>
+   </property>
+  </action>
+  <action name="actionCustom">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/custom.png</normaloff>:/MainFrame/Resources/custom.png</iconset>
+   </property>
+   <property name="text">
+    <string>Custom</string>
+   </property>
+  </action>
+  <action name="actionX">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>X</string>
+   </property>
+  </action>
+  <action name="actionCouleur_du_fond">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/background_color.png</normaloff>:/MainFrame/Resources/background_color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Couleur du fond</string>
+   </property>
+  </action>
+  <action name="actionPr_cision_de_l_diteur">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/precision.png</normaloff>:/MainFrame/Resources/precision.png</iconset>
+   </property>
+   <property name="text">
+    <string>Précision de l'éditeur</string>
+   </property>
+  </action>
+  <action name="actionRamener_au_premier_plan">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/bring.png</normaloff>:/MainFrame/Resources/bring.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ramener au premier plan</string>
+   </property>
+  </action>
+  <action name="actionFran_ais">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/language_french.png</normaloff>:/MainFrame/Resources/language_french.png</iconset>
+   </property>
+   <property name="text">
+    <string>Français</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/language_english.png</normaloff>:/MainFrame/Resources/language_english.png</iconset>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionCopier">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/copy.png</normaloff>:/MainFrame/Resources/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copier</string>
+   </property>
+  </action>
+  <action name="actionCouper">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/cut.png</normaloff>:/MainFrame/Resources/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Couper</string>
+   </property>
+  </action>
+  <action name="actionColler">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/paste.png</normaloff>:/MainFrame/Resources/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Coller</string>
+   </property>
+  </action>
+  <action name="actionDeutsch">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/language_german.png</normaloff>:/MainFrame/Resources/language_german.png</iconset>
+   </property>
+   <property name="text">
+    <string>Deutsch</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MainFrame.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionQuitter</sender>
+   <signal>triggered()</signal>
+   <receiver>CMainFrameClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

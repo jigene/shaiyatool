@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{4a6a49f9-8515-4654-805f-839eccb21411}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{dff9b624-bbb8-4847-ba05-50b3991d3b69}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="MainFrame">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{ec28776e-b372-4635-95af-70785ae41aa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\DirectX">
+      <UniqueIdentifier>{60185898-a98c-4516-a5fc-dedf3025c52b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Graphics">
+      <UniqueIdentifier>{e84d718c-d42c-4b57-97bb-07ff1a15be62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\IO">
+      <UniqueIdentifier>{d422f565-a350-41d8-a8c5-630bc23497ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Utils">
+      <UniqueIdentifier>{f14c5859-37d6-44d4-80f1-bcaf6249aaa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Interface">
+      <UniqueIdentifier>{88e9106d-abc6-4cba-8d9d-52aa53f6b5b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{a67ab2ea-f2b5-4498-9773-5d9e7f578249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainFrame\UI">
+      <UniqueIdentifier>{2d8251ef-453c-4f1e-8d18-7e63c700c3f7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrame.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainFrame.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainFrame.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_MainFrame.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\D3DEnum.cpp">
+      <Filter>Common\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\D3DSettings.cpp">
+      <Filter>Common\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\D3DUtils.cpp">
+      <Filter>Common\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\D3DWidget.cpp">
+      <Filter>Common\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_D3DWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_D3DWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\File.cpp">
+      <Filter>Common\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\TextFile.cpp">
+      <Filter>Common\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIEditor.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_GUIEditor.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_GUIEditor.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\TextureMng.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Render2D.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\WndControl.cpp">
+      <Filter>Common\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\WndManager.cpp">
+      <Filter>Common\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Font.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="EditControl.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\WndControls.cpp">
+      <Filter>Common\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="DataManager.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="WndWindow.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\AboutDialog.cpp">
+      <Filter>Common\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AboutDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AboutDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ShortcutsMng.cpp">
+      <Filter>Common\Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>MainFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\D3DEnum.h">
+      <Filter>Common\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\D3DSettings.h">
+      <Filter>Common\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\D3DUtils.h">
+      <Filter>Common\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\File.h">
+      <Filter>Common\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\TextFile.h">
+      <Filter>Common\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\TextureMng.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Render2D.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\WndControl.h">
+      <Filter>Common\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\WndManager.h">
+      <Filter>Common\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Font.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\WndControls.h">
+      <Filter>Common\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManager.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="WndWindow.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_MainFrame.h">
+      <Filter>MainFrame\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PtrArray.h">
+      <Filter>Common\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ShortcutsMng.h">
+      <Filter>Common\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="MainFrame.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainFrame.ui">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainFrame.h">
+      <Filter>MainFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Common\D3DWidget.h">
+      <Filter>Common\DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GUIEditor.h">
+      <Filter>MainFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Common\AboutDialog.h">
+      <Filter>Common\Utils</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GUIEditor.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="guieditor_en.ts">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="guieditor_de.ts">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

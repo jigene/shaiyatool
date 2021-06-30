@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{7e01f6e0-b6b8-49b8-b02a-c453ada4de70}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{4512bf05-8906-4e98-9fa5-6b4252f5d817}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="MainFrame">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{6d15b881-fd49-4819-bc8d-8346bb9e0fcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\DirectX">
+      <UniqueIdentifier>{f06e5c84-6aa1-46af-9719-88782df5797c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Graphics">
+      <UniqueIdentifier>{0d446a2f-ac06-438c-8f4f-68b7a04a1259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Graphics\Model">
+      <UniqueIdentifier>{fda067ef-3ad6-4bc5-9c35-db123c1c6662}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\IO">
+      <UniqueIdentifier>{2fabeb37-3a34-402b-b6ca-6b3075263804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Utils">
+      <UniqueIdentifier>{e8bbdfa9-e0a5-4161-a48e-3e6038daf0d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Data">
+      <UniqueIdentifier>{cdc57009-f074-46e0-89ac-de490b88275e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\World">
+      <UniqueIdentifier>{de23b6d2-a88e-4a13-99e2-5138e557823e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Edition">
+      <UniqueIdentifier>{772c6e33-af0a-4e23-ae63-d8a7e93cd8e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainFrame\UI">
+      <UniqueIdentifier>{62bfa842-d9fb-4446-95ba-d6c8df9ac540}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialogs">
+      <UniqueIdentifier>{34b49b7d-00a4-4f29-8451-ea1b64b8505d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainFrame.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainFrame.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrame.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_MainFrame.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\D3DSettings.cpp">
+      <Filter>Common\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\D3DUtils.cpp">
+      <Filter>Common\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\D3DWidget.cpp">
+      <Filter>Common\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_D3DWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_D3DWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Font.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Motion.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Object3D.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Render2D.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Sfx.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\TextureMng.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\AnimatedMesh.cpp">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mesh.cpp">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SfxModel.cpp">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ModelMng.cpp">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Model.cpp">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\File.cpp">
+      <Filter>Common\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\TextFile.cpp">
+      <Filter>Common\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\D3DEnum.cpp">
+      <Filter>Common\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Project.cpp">
+      <Filter>Common\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\World.cpp">
+      <Filter>Common\World</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_WorldEditor.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_WorldEditor.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\WorldFile.cpp">
+      <Filter>Common\World</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Landscape.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Skybox.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\WorldEnvironment.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\World3D.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Object.cpp">
+      <Filter>Common\World</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Navigator.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Navigator.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_NewWorld.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_NewWorld.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\WorldIntersects.cpp">
+      <Filter>Common\World</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Collision.cpp">
+      <Filter>Common\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_WorldProperties.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_WorldProperties.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainEdition.cpp">
+      <Filter>Edition</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ContinentEdit.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ContinentEdit.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Mover.cpp">
+      <Filter>Common\World</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SpawnObject.cpp">
+      <Filter>Common\World</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Ctrl.cpp">
+      <Filter>Common\World</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Region.cpp">
+      <Filter>Common\World</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectEdition.cpp">
+      <Filter>Edition</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ObjectProperties.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ObjectProperties.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_GameElementsTree.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_GameElementsTree.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GameElementsTree.cpp">
+      <Filter>MainFrame\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Path.cpp">
+      <Filter>Common\World</Filter>
+    </ClCompile>
+    <ClCompile Include="View.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="ContinentEdit.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="EditInfos.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="NewWorld.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldList.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldProperties.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectProperties.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="EditFiles.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="Navigator.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldEditor.cpp">
+      <Filter>Edition</Filter>
+    </ClCompile>
+    <ClCompile Include="EditCommand.cpp">
+      <Filter>Edition</Filter>
+    </ClCompile>
+    <ClCompile Include="MainEdition.cpp">
+      <Filter>Edition</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\AboutDialog.cpp">
+      <Filter>Common\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AboutDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AboutDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ShortcutsMng.cpp">
+      <Filter>Common\Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>MainFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\D3DSettings.h">
+      <Filter>Common\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\D3DUtils.h">
+      <Filter>Common\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Font.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Motion.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Object3D.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Render2D.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Sfx.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\TextureMng.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\AnimatedMesh.h">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mesh.h">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SfxModel.h">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ModelMng.h">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Model.h">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\File.h">
+      <Filter>Common\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\TextFile.h">
+      <Filter>Common\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\D3DEnum.h">
+      <Filter>Common\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Project.h">
+      <Filter>Common\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\World.h">
+      <Filter>Common\World</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GameElements.h">
+      <Filter>Common\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Landscape.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Skybox.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Object.h">
+      <Filter>Common\World</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Region.h">
+      <Filter>Common\World</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Collision.h">
+      <Filter>Common\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\PtrArray.h">
+      <Filter>Common\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Mover.h">
+      <Filter>Common\World</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\SpawnObject.h">
+      <Filter>Common\World</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Ctrl.h">
+      <Filter>Common\World</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_ContinentEdit.h">
+      <Filter>MainFrame\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_MainFrame.h">
+      <Filter>MainFrame\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_NewWorld.h">
+      <Filter>MainFrame\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_ObjectProperites.h">
+      <Filter>MainFrame\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_Random.h">
+      <Filter>MainFrame\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_WorldProperties.h">
+      <Filter>MainFrame\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Path.h">
+      <Filter>Common\World</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainEdition.h">
+      <Filter>Edition</Filter>
+    </ClInclude>
+    <ClInclude Include="EditCommand.h">
+      <Filter>Edition</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectEdition.h">
+      <Filter>Edition</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ShortcutsMng.h">
+      <Filter>Common\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="MainFrame.h">
+      <Filter>MainFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainFrame.ui">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainFrame.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Common\D3DWidget.h">
+      <Filter>Common\DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NewWorld.ui">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WorldProperties.ui">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ContinentEdit.ui">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Random.ui">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ObjectProperites.ui">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GameElementsTree.h">
+      <Filter>MainFrame\UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ContinentEdit.h">
+      <Filter>Dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NewWorld.h">
+      <Filter>Dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WorldProperties.h">
+      <Filter>Dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ObjectProperties.h">
+      <Filter>Dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Navigator.h">
+      <Filter>Dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WorldEditor.h">
+      <Filter>Edition</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Common\AboutDialog.h">
+      <Filter>Common\Utils</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WorldEditor.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Common\World.inl">
+      <Filter>Common\World</Filter>
+    </None>
+    <None Include="worldeditor_en.ts">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="worldeditor_de.ts">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

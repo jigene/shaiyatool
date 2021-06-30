@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{b54324b2-0ffb-4c94-8274-f8b3bffbfbe2}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{04d6fbfd-9153-4d3b-932f-08b6fc7a3667}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="MainFrame">
+      <UniqueIdentifier>{a2bac527-425e-488e-9135-b936c817a353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{54952259-87c7-4925-8254-6b83e1d1d9ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\DirectX">
+      <UniqueIdentifier>{c8763df6-2263-4df6-ac17-f5560c9c9568}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Graphics">
+      <UniqueIdentifier>{01bcbae4-9987-4c35-a2ed-7768a9aa0f2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\IO">
+      <UniqueIdentifier>{01fff816-1565-496a-8db2-049ccb287d85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Graphics\Model">
+      <UniqueIdentifier>{8ca74f50-9ddc-465d-b914-cf3a2b1b6dd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainFrame\UI">
+      <UniqueIdentifier>{ba4ad07a-f946-458d-9286-588adfa491bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Export">
+      <UniqueIdentifier>{a19e505f-b18b-4ad3-a7be-df6c95211ab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Import">
+      <UniqueIdentifier>{b62e6004-79fb-495f-809a-cdef05890aef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Utils">
+      <UniqueIdentifier>{67eb6d53-b9e2-408a-8fa2-8beeacdace46}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainFrame.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainFrame.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_MainFrame.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrame.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\D3DEnum.cpp">
+      <Filter>Common\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\D3DSettings.cpp">
+      <Filter>Common\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\D3DUtils.cpp">
+      <Filter>Common\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\D3DWidget.cpp">
+      <Filter>Common\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_D3DWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_D3DWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\TextureMng.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Model.cpp">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ModelMng.cpp">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Motion.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Object3D.cpp">
+      <Filter>Common\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\File.cpp">
+      <Filter>Common\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\AnimatedMesh.cpp">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Timeline.cpp">
+      <Filter>Common\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Timeline.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Timeline.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelViewer.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ModelViewer.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ModelViewer.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Importer.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogEditEffects.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DialogEditEffects.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DialogEditEffects.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeCW.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinAuto.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SkinAuto.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SkinAuto.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\TextFile.cpp">
+      <Filter>Common\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\SoundMng.cpp">
+      <Filter>Common\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SoundMng.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SoundMng.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="DAEExporter.cpp">
+      <Filter>Export</Filter>
+    </ClCompile>
+    <ClCompile Include="Exporter.cpp">
+      <Filter>Export</Filter>
+    </ClCompile>
+    <ClCompile Include="OBJExporter.cpp">
+      <Filter>Export</Filter>
+    </ClCompile>
+    <ClCompile Include="ImportUtils.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="ImportMaterial.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="ImportAnim.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="ImportSkel.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="ImportGeometry.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\AboutDialog.cpp">
+      <Filter>Common\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AboutDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AboutDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\ShortcutsMng.cpp">
+      <Filter>Common\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionAuto.cpp">
+      <Filter>MainFrame</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>MainFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\D3DEnum.h">
+      <Filter>Common\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\D3DSettings.h">
+      <Filter>Common\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\D3DUtils.h">
+      <Filter>Common\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\TextureMng.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Model.h">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ModelMng.h">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Motion.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Object3D.h">
+      <Filter>Common\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\File.h">
+      <Filter>Common\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\AnimatedMesh.h">
+      <Filter>Common\Graphics\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Importer.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_DialogEditEffects.h">
+      <Filter>MainFrame\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_MainFrame.h">
+      <Filter>MainFrame\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_SkinAuto.h">
+      <Filter>MainFrame\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\TextFile.h">
+      <Filter>Common\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="DAEExporter.h">
+      <Filter>Export</Filter>
+    </ClInclude>
+    <ClInclude Include="Exporter.h">
+      <Filter>Export</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJExporter.h">
+      <Filter>Export</Filter>
+    </ClInclude>
+    <ClInclude Include="ImportUtils.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\ShortcutsMng.h">
+      <Filter>Common\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="MainFrame.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainFrame.ui">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainFrame.h">
+      <Filter>MainFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Common\D3DWidget.h">
+      <Filter>Common\DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Common\Timeline.h">
+      <Filter>Common\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ModelViewer.h">
+      <Filter>MainFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DialogEditEffects.h">
+      <Filter>MainFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DialogEditEffects.ui">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SkinAuto.ui">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SkinAuto.h">
+      <Filter>MainFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Common\SoundMng.h">
+      <Filter>Common\IO</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Common\AboutDialog.h">
+      <Filter>Common\Utils</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ModelEditor.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\Skin.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="modeleditor_en.ts">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="modeleditor_de.ts">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ModelEditor.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

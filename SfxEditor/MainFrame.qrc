@@ -1,0 +1,26 @@
+<RCC>
+  <qresource prefix="MainFrame">
+    <file>Resources/background_color.png</file>
+    <file>Resources/merge.png</file>
+    <file>Resources/about.png</file>
+    <file>Resources/add.png</file>
+    <file>Resources/close.png</file>
+    <file>Resources/fullscreen.png</file>
+    <file>Resources/grid.png</file>
+    <file>Resources/language.png</file>
+    <file>Resources/model.png</file>
+    <file>Resources/open.png</file>
+    <file>Resources/pause.png</file>
+    <file>Resources/play.png</file>
+    <file>Resources/quit.png</file>
+    <file>Resources/remove.png</file>
+    <file>Resources/save.png</file>
+    <file>Resources/save_as.png</file>
+    <file>Resources/stop.png</file>
+    <file>Resources/SfxEditor.png</file>
+    <file>..\Resources\language_english.png</file>
+    <file>..\Resources\language_french.png</file>
+    <file>..\Resources\language_german.png</file>
+    
+  </qresource>
+</RCC>

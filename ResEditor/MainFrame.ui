@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainFrameClass</class>
+ <widget class="QMainWindow" name="MainFrameClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>ResEditor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MainFrame.qrc">
+    <normaloff>:/MainFrame/Resources/ResEditor.png</normaloff>:/MainFrame/Resources/ResEditor.png</iconset>
+  </property>
+  <widget class="QListView" name="centralWidget">
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="dragDropMode">
+    <enum>QAbstractItemView::DragDrop</enum>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::ExtendedSelection</enum>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="resizeMode">
+    <enum>QListView::Adjust</enum>
+   </property>
+   <property name="gridSize">
+    <size>
+     <width>92</width>
+     <height>52</height>
+    </size>
+   </property>
+   <property name="viewMode">
+    <enum>QListView::IconMode</enum>
+   </property>
+   <property name="selectionRectVisible">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionNouveau"/>
+    <addaction name="actionOuvrir"/>
+    <addaction name="actionFermer"/>
+    <addaction name="separator"/>
+    <addaction name="actionEnregistrer"/>
+    <addaction name="actionEnregistrer_sous"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menu_dition">
+    <property name="title">
+     <string>Édition</string>
+    </property>
+    <addaction name="actionAjouter_des_fichiers"/>
+    <addaction name="actionExtraire_les_fichiers"/>
+    <addaction name="actionSupprimer_les_fichiers"/>
+    <addaction name="actionCl_de_cryptage"/>
+    <addaction name="actionCrypter_les_fichiers"/>
+    <addaction name="separator"/>
+    <addaction name="actionExtracteur_de_client"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="action_propos"/>
+    <addaction name="actionQt"/>
+   </widget>
+   <widget class="QMenu" name="menuAffichage">
+    <property name="title">
+     <string>Affichage</string>
+    </property>
+    <widget class="QMenu" name="menuLangage">
+     <property name="title">
+      <string>Langage</string>
+     </property>
+     <property name="icon">
+      <iconset resource="MainFrame.qrc">
+       <normaloff>:/MainFrame/Resources/language.png</normaloff>:/MainFrame/Resources/language.png</iconset>
+     </property>
+     <addaction name="actionFran_ais"/>
+     <addaction name="actionEnglish"/>
+     <addaction name="actionDeutsch"/>
+    </widget>
+    <widget class="QMenu" name="menuTrier_par">
+     <property name="title">
+      <string>Trier par</string>
+     </property>
+     <property name="icon">
+      <iconset resource="MainFrame.qrc">
+       <normaloff>:/MainFrame/Resources/sort.png</normaloff>:/MainFrame/Resources/sort.png</iconset>
+     </property>
+     <addaction name="actionNom"/>
+     <addaction name="actionType"/>
+     <addaction name="actionDate"/>
+     <addaction name="actionTaille_2"/>
+    </widget>
+    <widget class="QMenu" name="menuTaille">
+     <property name="title">
+      <string>Taille</string>
+     </property>
+     <property name="icon">
+      <iconset resource="MainFrame.qrc">
+       <normaloff>:/MainFrame/Resources/size.png</normaloff>:/MainFrame/Resources/size.png</iconset>
+     </property>
+     <addaction name="actionGrandes_ic_nes"/>
+     <addaction name="actionMoyennes_ic_nes"/>
+     <addaction name="actionPetites_ic_nes"/>
+     <addaction name="actionListe"/>
+    </widget>
+    <addaction name="menuTrier_par"/>
+    <addaction name="menuTaille"/>
+    <addaction name="separator"/>
+    <addaction name="menuLangage"/>
+    <addaction name="actionPlein_cran"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menu_dition"/>
+   <addaction name="menuAffichage"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Barre d'outils</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNouveau"/>
+   <addaction name="actionOuvrir"/>
+   <addaction name="actionEnregistrer"/>
+   <addaction name="actionFermer"/>
+   <addaction name="separator"/>
+   <addaction name="actionAjouter_des_fichiers"/>
+   <addaction name="actionSupprimer_les_fichiers"/>
+   <addaction name="separator"/>
+   <addaction name="actionCl_de_cryptage"/>
+   <addaction name="actionCrypter_les_fichiers"/>
+   <addaction name="separator"/>
+   <addaction name="actionExtracteur_de_client"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="styleSheet">
+    <string notr="true">background-color: #277570;</string>
+   </property>
+  </widget>
+  <action name="action_propos">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/about.png</normaloff>:/MainFrame/Resources/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>À propos</string>
+   </property>
+  </action>
+  <action name="actionQt">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/about.png</normaloff>:/MainFrame/Resources/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>Qt</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/quit.png</normaloff>:/MainFrame/Resources/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="actionPlein_cran">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/fullscreen.png</normaloff>:/MainFrame/Resources/fullscreen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Plein écran</string>
+   </property>
+  </action>
+  <action name="actionFran_ais">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/language_french.png</normaloff>:/MainFrame/Resources/language_french.png</iconset>
+   </property>
+   <property name="text">
+    <string>Français</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/language_english.png</normaloff>:/MainFrame/Resources/language_english.png</iconset>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/save.png</normaloff>:/MainFrame/Resources/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enregistrer</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer_sous">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/save_as.png</normaloff>:/MainFrame/Resources/save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enregistrer sous...</string>
+   </property>
+  </action>
+  <action name="actionNouveau">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/new.png</normaloff>:/MainFrame/Resources/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nouveau</string>
+   </property>
+  </action>
+  <action name="actionOuvrir">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/open.png</normaloff>:/MainFrame/Resources/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ouvrir</string>
+   </property>
+  </action>
+  <action name="actionFermer">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/close.png</normaloff>:/MainFrame/Resources/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fermer</string>
+   </property>
+  </action>
+  <action name="actionAjouter_des_fichiers">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/add.png</normaloff>:/MainFrame/Resources/add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ajouter des fichiers</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_les_fichiers">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/remove.png</normaloff>:/MainFrame/Resources/remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>Supprimer les fichiers</string>
+   </property>
+  </action>
+  <action name="actionCl_de_cryptage">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/key.png</normaloff>:/MainFrame/Resources/key.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clé de cryptage</string>
+   </property>
+  </action>
+  <action name="actionCrypter_les_fichiers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/lock.png</normaloff>:/MainFrame/Resources/lock.png</iconset>
+   </property>
+   <property name="text">
+    <string>Crypter les fichiers</string>
+   </property>
+  </action>
+  <action name="actionExtraire_les_fichiers">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/extract.png</normaloff>:/MainFrame/Resources/extract.png</iconset>
+   </property>
+   <property name="text">
+    <string>Extraire les fichiers</string>
+   </property>
+  </action>
+  <action name="actionExtracteur_de_client">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/extract.png</normaloff>:/MainFrame/Resources/extract.png</iconset>
+   </property>
+   <property name="text">
+    <string>Extracteur de client</string>
+   </property>
+  </action>
+  <action name="actionNom">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Nom</string>
+   </property>
+  </action>
+  <action name="actionType">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Type</string>
+   </property>
+  </action>
+  <action name="actionDate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Date</string>
+   </property>
+  </action>
+  <action name="actionTaille_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Taille</string>
+   </property>
+  </action>
+  <action name="actionGrandes_ic_nes">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Grandes icônes</string>
+   </property>
+  </action>
+  <action name="actionMoyennes_ic_nes">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Moyennes icônes</string>
+   </property>
+  </action>
+  <action name="actionPetites_ic_nes">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Petites icônes</string>
+   </property>
+  </action>
+  <action name="actionListe">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Liste</string>
+   </property>
+  </action>
+  <action name="actionDeutsch">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/language_german.png</normaloff>:/MainFrame/Resources/language_german.png</iconset>
+   </property>
+   <property name="text">
+    <string>Deutsch</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MainFrame.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionQuitter</sender>
+   <signal>triggered()</signal>
+   <receiver>MainFrameClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

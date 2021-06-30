@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainFrameClass</class>
+ <widget class="QMainWindow" name="MainFrameClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>ModelEditor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MainFrame.qrc">
+    <normaloff>:/MainFrame/Resources/ModelEditor.png</normaloff>:/MainFrame/Resources/ModelEditor.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionOuvrir"/>
+    <addaction name="actionEnregistrer"/>
+    <addaction name="actionFermer"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menu_dition">
+    <property name="title">
+     <string>Édition</string>
+    </property>
+    <addaction name="action_diter_les_effets"/>
+    <addaction name="actionCW_CCW"/>
+    <addaction name="actionSkin_auto"/>
+    <addaction name="actionCollision_auto"/>
+    <addaction name="actionTaille_l_import"/>
+    <addaction name="separator"/>
+    <addaction name="actionGuide_d_import"/>
+   </widget>
+   <widget class="QMenu" name="menuAffichage">
+    <property name="title">
+     <string>Affichage</string>
+    </property>
+    <widget class="QMenu" name="menuLangage">
+     <property name="title">
+      <string>Langage</string>
+     </property>
+     <property name="icon">
+      <iconset resource="MainFrame.qrc">
+       <normaloff>:/MainFrame/Resources/language.png</normaloff>:/MainFrame/Resources/language.png</iconset>
+     </property>
+     <addaction name="actionFran_ais"/>
+     <addaction name="actionEnglish"/>
+     <addaction name="actionDeutsch"/>
+    </widget>
+    <addaction name="actionGrille"/>
+    <addaction name="actionCouleur_du_fond"/>
+    <addaction name="actionVolume_sonore"/>
+    <addaction name="separator"/>
+    <addaction name="actionTextures_additionnelles"/>
+    <addaction name="actionObjet_de_collision"/>
+    <addaction name="actionOs"/>
+    <addaction name="actionModel_de_r_f_rence"/>
+    <addaction name="separator"/>
+    <addaction name="actionJouer"/>
+    <addaction name="actionStop"/>
+    <addaction name="separator"/>
+    <addaction name="actionLOD_0"/>
+    <addaction name="actionLOD_1"/>
+    <addaction name="actionLOD_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionSolide"/>
+    <addaction name="actionLigne"/>
+    <addaction name="actionPoint"/>
+    <addaction name="separator"/>
+    <addaction name="menuLangage"/>
+    <addaction name="actionPlein_cran"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="action_propos"/>
+    <addaction name="actionQt"/>
+   </widget>
+   <widget class="QMenu" name="menuFen_tres">
+    <property name="title">
+     <string>Fenêtres</string>
+    </property>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menu_dition"/>
+   <addaction name="menuAffichage"/>
+   <addaction name="menuFen_tres"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="styleSheet">
+    <string notr="true">background-color: #180076;</string>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Barre d'outils</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOuvrir"/>
+   <addaction name="actionEnregistrer"/>
+   <addaction name="actionFermer"/>
+   <addaction name="separator"/>
+   <addaction name="actionJouer"/>
+   <addaction name="actionStop"/>
+   <addaction name="separator"/>
+   <addaction name="actionTaille_l_import"/>
+   <addaction name="action_diter_les_effets"/>
+   <addaction name="actionCW_CCW"/>
+   <addaction name="actionSkin_auto"/>
+   <addaction name="actionCollision_auto"/>
+   <addaction name="separator"/>
+   <addaction name="actionGrille"/>
+   <addaction name="actionTextures_additionnelles"/>
+   <addaction name="actionObjet_de_collision"/>
+   <addaction name="actionOs"/>
+   <addaction name="actionModel_de_r_f_rence"/>
+   <addaction name="separator"/>
+   <addaction name="actionSolide"/>
+   <addaction name="actionLigne"/>
+   <addaction name="actionPoint"/>
+   <addaction name="separator"/>
+   <addaction name="actionLOD_0"/>
+   <addaction name="actionLOD_1"/>
+   <addaction name="actionLOD_2"/>
+   <addaction name="separator"/>
+   <addaction name="actionVolume_sonore"/>
+  </widget>
+  <widget class="QDockWidget" name="dockTimeline">
+   <property name="allowedAreas">
+    <set>Qt::BottomDockWidgetArea|Qt::TopDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Timeline</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents"/>
+  </widget>
+  <widget class="QDockWidget" name="dockAnimations">
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Animations</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QListView" name="motionList">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="uniformItemSizes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="action_propos">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/about.png</normaloff>:/MainFrame/Resources/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>À propos</string>
+   </property>
+  </action>
+  <action name="actionQt">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/about.png</normaloff>:/MainFrame/Resources/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>Qt</string>
+   </property>
+  </action>
+  <action name="actionOuvrir">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/open.png</normaloff>:/MainFrame/Resources/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ouvrir</string>
+   </property>
+  </action>
+  <action name="actionFermer">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/close.png</normaloff>:/MainFrame/Resources/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fermer</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/quit.png</normaloff>:/MainFrame/Resources/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="action_diter_les_effets">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/settings.png</normaloff>:/MainFrame/Resources/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Éditer les effets</string>
+   </property>
+  </action>
+  <action name="actionGrille">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/grid.png</normaloff>:/MainFrame/Resources/grid.png</iconset>
+   </property>
+   <property name="text">
+    <string>Grille</string>
+   </property>
+  </action>
+  <action name="actionTextures_additionnelles">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/texture.png</normaloff>:/MainFrame/Resources/texture.png</iconset>
+   </property>
+   <property name="text">
+    <string>Textures additionnelles</string>
+   </property>
+  </action>
+  <action name="actionJouer">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/play.png</normaloff>
+     <normalon>:/MainFrame/Resources/pause.png</normalon>:/MainFrame/Resources/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Jouer</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/stop.png</normaloff>:/MainFrame/Resources/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionLOD_0">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/lod1.png</normaloff>:/MainFrame/Resources/lod1.png</iconset>
+   </property>
+   <property name="text">
+    <string>LOD 0</string>
+   </property>
+  </action>
+  <action name="actionLOD_1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/lod2.png</normaloff>:/MainFrame/Resources/lod2.png</iconset>
+   </property>
+   <property name="text">
+    <string>LOD 1</string>
+   </property>
+  </action>
+  <action name="actionLOD_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/lod3.png</normaloff>:/MainFrame/Resources/lod3.png</iconset>
+   </property>
+   <property name="text">
+    <string>LOD 2</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/save_as.png</normaloff>:/MainFrame/Resources/save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enregistrer</string>
+   </property>
+  </action>
+  <action name="actionGuide_d_import">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/about.png</normaloff>:/MainFrame/Resources/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guide d'import</string>
+   </property>
+  </action>
+  <action name="actionPlein_cran">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/fullscreen.png</normaloff>:/MainFrame/Resources/fullscreen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Plein écran</string>
+   </property>
+  </action>
+  <action name="actionCouleur_du_fond">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/background_color.png</normaloff>:/MainFrame/Resources/background_color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Couleur du fond</string>
+   </property>
+  </action>
+  <action name="actionFran_ais">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/language_french.png</normaloff>:/MainFrame/Resources/language_french.png</iconset>
+   </property>
+   <property name="text">
+    <string>Français</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/language_english.png</normaloff>:/MainFrame/Resources/language_english.png</iconset>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionObjet_de_collision">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/collision.png</normaloff>:/MainFrame/Resources/collision.png</iconset>
+   </property>
+   <property name="text">
+    <string>Objet de collision</string>
+   </property>
+  </action>
+  <action name="actionCW_CCW">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/cw_ccw.png</normaloff>:/MainFrame/Resources/cw_ccw.png</iconset>
+   </property>
+   <property name="text">
+    <string>CW &lt;-&gt; CCW</string>
+   </property>
+  </action>
+  <action name="actionSkin_auto">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/Skin.png</normaloff>:/MainFrame/Resources/Skin.png</iconset>
+   </property>
+   <property name="text">
+    <string>Skin auto</string>
+   </property>
+  </action>
+  <action name="actionVolume_sonore">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/volume.png</normaloff>:/MainFrame/Resources/volume.png</iconset>
+   </property>
+   <property name="text">
+    <string>Volume sonore</string>
+   </property>
+  </action>
+  <action name="actionDeutsch">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/language_german.png</normaloff>:/MainFrame/Resources/language_german.png</iconset>
+   </property>
+   <property name="text">
+    <string>Deutsch</string>
+   </property>
+  </action>
+  <action name="actionOs">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/bones.png</normaloff>:/MainFrame/Resources/bones.png</iconset>
+   </property>
+   <property name="text">
+    <string>Os</string>
+   </property>
+  </action>
+  <action name="actionSolide">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/fill_solid.png</normaloff>:/MainFrame/Resources/fill_solid.png</iconset>
+   </property>
+   <property name="text">
+    <string>Solide</string>
+   </property>
+  </action>
+  <action name="actionLigne">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/fill_line.png</normaloff>:/MainFrame/Resources/fill_line.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ligne</string>
+   </property>
+  </action>
+  <action name="actionPoint">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/fill_point.png</normaloff>:/MainFrame/Resources/fill_point.png</iconset>
+   </property>
+   <property name="text">
+    <string>Point</string>
+   </property>
+  </action>
+  <action name="actionTaille_l_import">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/scale.png</normaloff>:/MainFrame/Resources/scale.png</iconset>
+   </property>
+   <property name="text">
+    <string>Taille à l'import</string>
+   </property>
+  </action>
+  <action name="actionModel_de_r_f_rence">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/model.png</normaloff>:/MainFrame/Resources/model.png</iconset>
+   </property>
+   <property name="text">
+    <string>Model de référence</string>
+   </property>
+  </action>
+  <action name="actionCollision_auto">
+   <property name="icon">
+    <iconset resource="MainFrame.qrc">
+     <normaloff>:/MainFrame/Resources/Coll.png</normaloff>:/MainFrame/Resources/Coll.png</iconset>
+   </property>
+   <property name="text">
+    <string>Collision auto</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MainFrame.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionQuitter</sender>
+   <signal>triggered()</signal>
+   <receiver>MainFrameClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>408</x>
+     <y>275</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
