@@ -656,5 +656,6 @@ void CMainFrame::SetLanguage(QAction* action)
 
 bool CMainFrame::MsgBoxForErrors()
 {
-	return ui.actionBo_te_de_dialogue_pour_les_erreurs->isChecked();
+	return true;
+	//return ui.actionBo_te_de_dialogue_pour_les_erreurs->isChecked();
 }

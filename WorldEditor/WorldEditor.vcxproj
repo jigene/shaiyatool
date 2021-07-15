@@ -41,7 +41,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)\Binary\</OutDir>
     <IncludePath>$(QTDIR)\include;..\Binary;..\Lib\DirectX;C:\Users\Christopher\Documents\Personal\Freelance\Tina Marash - Game World Map Editor\Work\ATools\Common;..\Common;.;$(IncludePath)</IncludePath>
-    <LibraryPath>$(QTDIR)\lib;..\Lib\DirectX;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\Lib;$(ProjectDir)\Lib;$(QTDIR)\lib;..\Lib\DirectX;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)\Binary\</OutDir>
@@ -65,8 +65,11 @@
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>d3d9.lib;d3dx9d.lib;qtmaind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;d3dx9d.lib;qtmaind.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5Multimedia.lib;Qt5Xml.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y ..\DLL ..\Binary</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
