@@ -9,6 +9,8 @@
 #include "TextFile.h"
 #include "GameElements.h"
 #include "TextureMng.h"
+#include <iostream>
+#include <fstream>
 
 CProject* Project = null;
 int g_waterCount = 0;
@@ -973,4 +975,65 @@ void CProject::FillCharacterComboBox(QComboBox* comboBox, const string& current)
 
 	if (!current.isEmpty())
 	comboBox->setCurrentText(current.toLower());
+}
+
+void CProject::LoadWater(const std::string& filename)
+{
+	std::ifstream reader(filename, std::ios::binary);
+	int waterCount = 0;
+
+	if (reader.is_open()) {
+
+		reader.seekg(0, reader.end);
+
+		int total = reader.tellg();
+
+		reader.seekg(0, reader.beg);
+
+		char * filedata = new char[total + 1];
+		reader.read(filedata, total);
+
+		std::string filetext("");
+		bool found = false;
+
+		for (int counter = 0; counter < total; counter++) {
+
+			filetext += *(filedata + counter);
+
+			if (filetext.find(".") != std::string::npos) {
+
+				found = true;
+			}
+
+			if (*(filedata + counter) == '\0') {
+
+				if (found) {
+
+					m_terrains[waterCount++] = string(filetext.c_str());
+					found = false;
+				}
+
+				filetext = "";
+			}
+		}
+
+		reader.close();
+
+		if (waterCount > 0) {
+
+			m_waterLists = new WaterList[waterCount];
+
+			for (int counter = 0; counter < waterCount; counter++) {
+
+				m_waterLists[counter].frame = 0.0f;
+				m_waterLists[counter].name = m_terrains[counter];
+				m_waterLists[counter].textureCount = 1;
+				m_waterLists[counter].textures = new CTexture*[waterCount];
+				m_waterLists[counter].textures[0] = TextureMng->GetTerrainTexture(m_terrains[counter]);
+				m_waterLists[counter].textureIDs = new int[1]{counter};
+			}
+
+			m_waterListCount = waterCount;
+		}
+	}
 }

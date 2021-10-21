@@ -18,7 +18,7 @@
 bool CWorld::_loadWldFile(const string& filename)
 {
 	CTextFile file;
-	if (!file.Load(filename))
+	if (!file.Load(filename, true, true))
 		return false;
 
 	const string keys[] =
@@ -29,9 +29,9 @@ bool CWorld::_loadWldFile(const string& filename)
 		"indoor",
 		"fly",
 		"bgm",
-		"pkmode",
+		"heightmap",
 		"diffuse",
-		"lightdir",
+		"lightmap",
 		"camera",
 		"fogsetting",
 		"mpu",
@@ -50,9 +50,7 @@ bool CWorld::_loadWldFile(const string& filename)
 
 		if (tok == keys[0])
 		{
-			m_width = file.GetInt();
-			file.NextToken(); // ,
-			m_height = file.GetInt();
+			m_height = m_width = file.GetLong();
 		}
 		else if (tok == keys[1])
 			m_ambient = file.GetUInt();
@@ -67,15 +65,22 @@ bool CWorld::_loadWldFile(const string& filename)
 			m_canFly = file.GetBool();
 		else if (tok == keys[5])
 			m_bgmID = file.GetInt();
-		else if (tok == keys[6])
-			m_modePK = file.GetInt();
+		else if (tok == keys[6]) {
+			//m_modePK = file.GetInt();
+
+			heightMap = file.GetMapHeight();
+			heightMapTotal = heightMapLength = file.GetInt();
+		}
 		else if (tok == keys[7])
 			m_diffuse = file.GetUInt();
 		else if (tok == keys[8])
 		{
-			m_lightDir.x = file.GetFloat();
-			m_lightDir.y = file.GetFloat();
-			m_lightDir.z = file.GetFloat();
+			//m_lightDir.x = file.GetFloat();
+			//m_lightDir.y = file.GetFloat();
+			//m_lightDir.z = file.GetFloat();
+
+			lightMap = file.GetLightMap();
+			lightMapTotal = lightMapLength = file.GetInt();
 		}
 		else if (tok == keys[9])
 		{
@@ -107,20 +112,36 @@ bool CWorld::_loadWldFile(const string& filename)
 			m_MPU = file.GetInt();
 		else if (tok == keys[12])
 		{
-			for (int i = 0; i < 3; i++)
+			for (int i = 0; i < 3; i++) {
 				m_skyTextureNames[i] = file.GetString();
+				file.NextToken();
+			}
 		}
 		else if (tok == keys[13])
 		{
-			for (int i = 0; i < 3; i++)
+			for (int i = 0; i < 3; i++) {
 				m_skyTextureNames[i] = file.GetString();
+				file.NextToken();
+			}
 		}
 		else if (tok == keys[14])
 			m_sunTextureName = file.GetString();
 		else if (tok == keys[15])
 			m_moonTextureName = file.GetString();
-		else if (tok == keys[16])
-			m_seaCloudTextureName = file.GetString();
+		else if (tok == keys[16]) {
+			//m_seaCloudTextureName = file.GetString();
+
+			Project->LoadWater("Weather/" + std::string(file.GetString().toUtf8().constData()));
+
+			//for (int i = 0; i < m_height; i++)
+			//{
+			//	for (int j = 0; j < m_width; j++)
+			//	{
+
+			//		CLandscape land = m_lands[i * m_width + j];
+			//	}
+			//}
+		}
 
 		file.NextToken();
 	}

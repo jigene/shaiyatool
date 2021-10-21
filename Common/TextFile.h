@@ -7,6 +7,9 @@
 #ifndef TEXTFILE_H
 #define TEXTFILE_H
 
+#include <iomanip>      // std::setfill, std::setw
+#include <sstream>      // std::ostringstream
+
 enum class ETokenType
 {
 	End,
@@ -32,20 +35,33 @@ public:
 	CTextFile();
 	~CTextFile();
 
-	bool Load(const string& filename, bool error = true);
+	bool Load(const string& filename, bool error = true, bool specLoad = false);
 	void Close();
 	void PutBack();
 	string GetLine();
 	int GetInt();
 	uint GetUInt();
 	float GetFloat();
+	unsigned long GetLong();
 
 	bool GetBool() {
 		return GetInt() != 0;
 	}
 	string GetString(bool ids = true) {
-		_getToken(false, ids);
-		return string(m_token);
+
+		string val = "";
+
+		if (!isSpecLoad) {
+
+			_getToken(false, ids);
+			val = string(m_token);
+		}
+		else {
+		
+			val = retStrVal;
+		}
+
+		return val;
 	}
 	void NextToken(bool ids = true) {
 		_getToken(false, ids);
@@ -65,6 +81,32 @@ public:
 		return string(m_token);
 	}
 
+	char* CTextFile::GetMapHeight() {
+
+		char* heightData = null;
+
+		if (heightMapStart > 0 && heightMapEnd > 0) {
+		
+			heightData = new char[heightMapEnd - heightMapStart];
+			memcpy(heightData, filedata + heightMapStart, heightMapEnd - heightMapStart);
+		}
+
+		return heightData;
+	}
+
+	char* CTextFile::GetLightMap() {
+
+		char* lightData = null;
+
+		if (lightMapStart > 0 && lightMapEnd > 0) {
+
+			lightData = new char[lightMapEnd - lightMapStart];
+			memcpy(lightData, filedata + lightMapStart, lightMapEnd - lightMapStart);
+		}
+
+		return lightData;
+	}
+
 private:
 	QChar* m_buffer;
 	QChar m_token[MaxTokenLength];
@@ -74,6 +116,23 @@ private:
 	QChar* m_mark;
 
 	void _getToken(bool number, bool ids = true);
+
+	bool isSpecLoad = false,
+		 waterDataFound = false,
+		 skyDataFound = false,
+		 lightMapNotSend = true,
+		 heightMapNotSend = true;
+	char* filedata = null;
+	string retStrVal = "";
+	float retFloatVal = 0.0;
+	unsigned long retLongVal = 0;
+	int retIntVal = 0,
+		current = 0,
+		heightMapStart = 0,
+		heightMapEnd = 0,
+		lightMapStart = 0,
+		lightMapEnd = 0,
+		total = 0;
 
 public:
 	static bool LoadDefine(const string& filename, bool error = true);

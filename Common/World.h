@@ -147,6 +147,8 @@ public:
 	CObject* PickObject(const QPoint& mousePos);
 	void SelectObjects(const QRect& rect);
 
+	std::vector<byte> GetLightMap(int length);
+
 private:
 	LPDIRECT3DDEVICE9 m_device;
 	int m_width;
@@ -188,6 +190,23 @@ private:
 	CPtrArray<Continent> m_continents;
 	CPathArray m_paths;
 	objid m_nextObjectID;
+
+	char* heightMap,
+		* lightMap;
+	int heightMapStart = 0,
+		heightMapTotal = 0,
+		heightMapCurrent = 0,
+		heightMapLength = 0,
+		lightMapStart = 0,
+		lightMapTotal = 0,
+		lightMapCurrent = 0,
+		lightMapLength = 0;
+//	std::vector<string> envTexture = {};
+
+	std::vector<float> GetMapHeight(int length);
+//	float GetHeightPercent(int hVal, int bVal);
+	void ResetMapHeight();
+	void ResetLightMap();
 
 	void _initialize();
 	bool _loadWldFile(const string& filename);

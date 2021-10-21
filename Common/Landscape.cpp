@@ -280,7 +280,8 @@ void CLandscape::UpdateTextureLayers()
 	D3DLOCKED_RECT rectLock;
 	D3DCOLOR* pixels;
 	LandLayer* layer;
-	int j;
+	int j,
+		color = 0;
 
 	for (int i = 0; i < m_layers.GetSize(); i++)
 	{
@@ -288,91 +289,102 @@ void CLandscape::UpdateTextureLayers()
 		layer->lightMap->LockRect(0, &rectLock, 0, 0);
 		pixels = (D3DCOLOR*)rectLock.pBits;
 		for (j = 0; j < MAP_SIZE * MAP_SIZE; j++)
-			pixels[j] = D3DCOLOR_ARGB(layer->alphaMap[j], m_colorMap[j * 3], m_colorMap[j * 3 + 1], m_colorMap[j * 3 + 2]);
+			pixels[j] = D3DCOLOR_ARGB(layer->alphaMap[j], m_colorMap[color++], m_colorMap[color++], m_colorMap[color++]);
 		layer->lightMap->UnlockRect(0);
 	}
 }
 
 bool CLandscape::Load(const string& filename)
 {
-	CFile file;
-	if (!file.Open(filename, QIODevice::ReadOnly))
-		return false;
+	//CFile file;
+	//if (!file.Open(filename, QIODevice::ReadOnly))
+	//	return false;
 
-	uint version;
-	file.Read(version);
+	//uint version;
+	//file.Read(version);
 
-	if (version >= 1)
-		file.Skip(8); // x, y pos
+	//if (version >= 1)
+	//	file.Skip(8); // x, y pos
 
-	file.Read(m_heightMap, (MAP_SIZE + 1) * (MAP_SIZE + 1));
-	file.Read(m_waterHeight, NUM_PATCHES_PER_SIDE * NUM_PATCHES_PER_SIDE);
+	//file.Read(m_heightMap, (MAP_SIZE + 1) * (MAP_SIZE + 1));
+	//file.Read(m_waterHeight, NUM_PATCHES_PER_SIDE * NUM_PATCHES_PER_SIDE);
 
-	if (version >= 2)
-		file.Skip(NUM_PATCHES_PER_SIDE * NUM_PATCHES_PER_SIDE); // land attributes
+	//if (version >= 2)
+	//	file.Skip(NUM_PATCHES_PER_SIDE * NUM_PATCHES_PER_SIDE); // land attributes
 
-	byte layerCount;
+	byte layerCount = 1;
 	int patchEnable[NUM_PATCHES_PER_SIDE * NUM_PATCHES_PER_SIDE];
 	LandLayer* layer = null;
-	ushort textureID;
-	byte lightMap[MAP_SIZE * MAP_SIZE * 4];
-	int j;
-	D3DLOCKED_RECT rectLock;
+	ushort textureID = 0;
+//	byte lightMap[MAP_SIZE * MAP_SIZE * 4];
+	std::vector<byte> lightMap = m_world -> GetLightMap(MAP_SIZE * MAP_SIZE * 3);
+	int j,
+		color = 0;
+	//D3DLOCKED_RECT rectLock;
 
-	file.Read(layerCount);
+	//file.Read(layerCount);
 	for (byte i = 0; i < layerCount; i++)
 	{
-		file.Read(textureID);
+	//	file.Read(textureID);
 		layer = GetLayer((int)textureID);
-		file.Read(patchEnable, NUM_PATCHES_PER_SIDE * NUM_PATCHES_PER_SIDE);
+	//	file.Read(patchEnable, NUM_PATCHES_PER_SIDE * NUM_PATCHES_PER_SIDE);
 		for (j = 0; j < NUM_PATCHES_PER_SIDE * NUM_PATCHES_PER_SIDE; j++)
 			layer->patchEnable[j] = patchEnable[j] != 0;
-		file.Read(lightMap);
+	//	file.Read(lightMap);
 		for (j = 0; j < MAP_SIZE * MAP_SIZE; j++)
 		{
-			layer->alphaMap[j] = lightMap[j * 4 + 3];
-			if (layer->alphaMap[j] > 0)
-			{
-				m_colorMap[j * 3] = lightMap[j * 4 + 2];
-				m_colorMap[j * 3 + 1] = lightMap[j * 4 + 1];
-				m_colorMap[j * 3 + 2] = lightMap[j * 4];
-			}
+			layer->alphaMap[j] = 255;
+//			if (layer->alphaMap[j] > 0)
+//			{
+				m_colorMap[color] = lightMap[j];
+				m_colorMap[color + 1] = lightMap[color + 1];
+				m_colorMap[color + 2] = lightMap[color + 2];
+				color += 3;
+//			}
 		}
 	}
 
-	uint objCount;
-	CObject* obj;
+	//uint objCount;
+	//CObject* obj;
 
-	file.Read(objCount);
-	for (uint i = 0; i < objCount; i++)
-	{
-		obj = CObject::CreateObject(file);
-		if (obj)
-		{
-			if (version >= 1)
-				obj->SetPos(obj->GetPos() + GetPosition());
-			m_world->AddObject(obj);
-		}
-	}
+	//file.Read(objCount);
+	//for (uint i = 0; i < objCount; i++)
+	//{
+	//	obj = CObject::CreateObject(file);
+	//	if (obj)
+	//	{
+	//		if (version >= 1)
+	//			obj->SetPos(obj->GetPos() + GetPosition());
+	//		m_world->AddObject(obj);
+	//	}
+	//}
 
-	file.Read(objCount);
-	for (uint i = 0; i < objCount; i++)
-	{
-		obj = CObject::CreateObject(file);
-		if (obj)
-		{
-			if (version >= 1)
-				obj->SetPos(obj->GetPos() + GetPosition());
-			m_world->AddObject(obj);
-		}
-	}
+	//file.Read(objCount);
+	//for (uint i = 0; i < objCount; i++)
+	//{
+	//	obj = CObject::CreateObject(file);
+	//	if (obj)
+	//	{
+	//		if (version >= 1)
+	//			obj->SetPos(obj->GetPos() + GetPosition());
+	//		m_world->AddObject(obj);
+	//	}
+	//}
 
-	file.Close();
+	//file.Close();
 
 	UpdateTextureLayers();
 	MakeWaterVertexBuffer();
 	MakeAttributesVertexBuffer();
 	return true;
+}
+
+void CLandscape::SetupHeightMap(std::vector<float> mapData, int length) {
+
+	for (int i = 0; i < (MAP_SIZE + 1) * (MAP_SIZE + 1) && i < length; i++) {
+
+		m_heightMap[i] = mapData[i];
+	}
 }
 
 bool CLandscape::Save(const string& filename)

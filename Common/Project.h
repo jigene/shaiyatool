@@ -104,6 +104,8 @@ public:
 
 	QStandardItem* CreateFavorite(QDataStream& data);
 
+	void CProject::LoadWater(const std::string& filename);
+
 private:
 	string m_name;
 	QMap<int, string> m_terrains;

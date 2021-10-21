@@ -105,6 +105,8 @@ public:
 	void MakeAttributesVertexBuffer();
 	void UpdateTextureLayers();
 
+	void SetupHeightMap(std::vector<float> mapData, int length);
+
 private:
 	LPDIRECT3DDEVICE9 m_device;
 	int m_posX;

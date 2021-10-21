@@ -27,6 +27,8 @@ void CWorld::Render()
 {
 	_applyCamera();
 	_loadLndFiles();
+	ResetMapHeight();
+	ResetLightMap();
 
 	int x, z, i, j, X, Y;
 	WorldPosToLand(m_cameraPos, x, z);
@@ -399,10 +401,11 @@ void CWorld::_renderWater()
 	}
 
 	const WaterHeight* height = GetWaterHeight(m_cameraPos.x, m_cameraPos.z);
-	if (height && (height->texture & (byte)(~MASK_WATERFRAME)) == WTYPE_WATER
-		&& m_cameraPos.y < height->height)
+//	if (height && (height->texture & (byte)(~MASK_WATERFRAME)) == WTYPE_WATER
+	if (height && m_cameraPos.y < height->height)
 	{
 		const CTexture* texture = Project->GetWaterTexture(height->texture >> 2);
+
 		if (texture)
 		{
 			m_device->SetRenderState(D3DRS_ZWRITEENABLE, FALSE);

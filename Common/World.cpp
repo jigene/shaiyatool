@@ -222,7 +222,7 @@ void CWorld::Create(int width, int height, int textureID, float heightMap, int M
 						land->m_heightMap[x2 *(MAP_SIZE + 1) + y2] = QColor(image.pixel(
 							(int)(((float)(x2 + y * MAP_SIZE) / (float)(m_height * MAP_SIZE)) * (float)image.width()),
 							(int)(((float)(y2 + x * MAP_SIZE) / (float)(m_width * MAP_SIZE)) * (float)image.height())
-							)).redF() * heightMap;
+						)).redF() * heightMap;
 					}
 				}
 			}
@@ -240,6 +240,124 @@ void CWorld::Create(int width, int height, int textureID, float heightMap, int M
 			}
 		}
 	}
+}
+
+std::vector<float> CWorld::GetMapHeight(int length) {
+
+	std::vector<float> heightData(length, 0.0);
+//	float heightAvg = 0;
+	int dataTotal = length,
+		covered = 0,
+		found = 0;
+
+	if (heightMapCurrent >= 0 && heightMapLength > 0) {
+
+		if (length > heightMapLength) {
+
+			dataTotal = heightMapLength;
+		}		
+
+		while (found < dataTotal && covered < heightMapLength) {
+
+			heightData[found++] = *(heightMap + covered + heightMapCurrent);
+			covered++;
+		}
+
+		heightMapCurrent += covered;
+		heightMapLength -= covered;
+	}
+
+	return heightData;
+}
+
+std::vector<byte> CWorld::GetLightMap(int length) {
+
+	std::vector<byte> lightMapData(length, 0.0);
+	int dataTotal = length,
+		covered = 0,
+		found = 0,
+		hVal = 0,
+		sVal = 2.55,
+		vVal = 0;
+	float convVal1 = 0,
+		  convVal2 = 0;
+
+	if (lightMapCurrent >= 0 && lightMapLength > 0) {
+
+		if (length > lightMapLength) {
+
+			dataTotal = lightMapLength;
+		}
+
+		while (found < dataTotal && covered + 2 < lightMapLength) {
+
+			hVal = round((*(lightMap + covered + lightMapCurrent)) + 180);
+			vVal = *(lightMap + covered + 1 + lightMapCurrent);
+			convVal1 = round(254 * sVal / 255);
+			convVal2 = round((vVal - convVal1) * (hVal % 60) / 60);
+			
+			if (hVal >= 360) {
+			
+				hVal = 0;
+			}
+
+			if (hVal < 60) {
+
+				lightMapData[found++] = vVal;
+				lightMapData[found++] = convVal1 + convVal2 ;
+				lightMapData[found++] = convVal1;
+			}
+			else if (hVal < 120) {
+
+				lightMapData[found++] = vVal - convVal2;
+				lightMapData[found++] = vVal;
+				lightMapData[found++] = convVal1;
+			}
+			else if (hVal < 180) {
+
+				lightMapData[found++] = convVal1;
+				lightMapData[found++] = vVal;
+				lightMapData[found++] = convVal1 + convVal2;
+			}
+			else if (hVal < 240) {
+
+				lightMapData[found++] = convVal1;
+				lightMapData[found++] = vVal - convVal2;
+				lightMapData[found++] = vVal;
+			}
+			else if (hVal < 300) {
+
+				lightMapData[found++] = convVal1 + convVal2;
+				lightMapData[found++] = convVal1;
+				lightMapData[found++] = vVal;
+			}
+			else if (hVal < 360) {
+
+				lightMapData[found++] = vVal;
+				lightMapData[found++] = convVal1;
+				lightMapData[found++] = vVal - convVal2;
+			}
+
+			covered += 2;
+		}
+
+		lightMapCurrent += covered;
+		lightMapLength -= covered;
+	}
+
+	return lightMapData;
+}
+
+void CWorld::ResetMapHeight() {
+
+	heightMapCurrent = heightMapStart;
+	heightMapLength = heightMapTotal;
+}
+
+void CWorld::ResetLightMap() {
+
+	lightMapCurrent = lightMapStart;
+	lightMapLength = lightMapTotal;
 }
 
 void CWorld::AddObject(CObject* obj)
@@ -450,6 +568,9 @@ void CWorld::DeleteObject(CObject* obj)
 bool CWorld::_loadLndFile(int i, int j)
 {
 	CLandscape* land = new CLandscape(m_device, this, j * MAP_SIZE, i * MAP_SIZE);
+
+	land->SetupHeightMap(GetMapHeight((MAP_SIZE + 1) * (MAP_SIZE + 1)), (MAP_SIZE + 1) * (MAP_SIZE + 1));
+
 	if (!land->Load(m_filename + string().sprintf("%02d-%02d.lnd", j, i)))
 	{
 		Delete(land);
