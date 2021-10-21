@@ -1,0 +1,5 @@
+---------------------------------------------
+17/08/2021 10:56:58
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\project.cpp line 838
+class CTexture *__thiscall CProject::GetTerrain(int) const
+Terrain texture with ID 10 doesn't exist

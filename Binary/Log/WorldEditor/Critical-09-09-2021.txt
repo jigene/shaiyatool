@@ -1,0 +1,50 @@
+---------------------------------------------
+09/09/2021 02:12:55
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'C:/Users/Christopher/Documents/Personal/Freelance/Tina Marash - Game World Map Editor/Work/ATools/Binary/Model/000-00.lnd'
+---------------------------------------------
+09/09/2021 02:13:45
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'C:/Users/Christopher/Documents/Personal/Freelance/Tina Marash - Game World Map Editor/Work/ATools/Binary/Model/001-00.lnd'
+---------------------------------------------
+09/09/2021 02:13:53
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'C:/Users/Christopher/Documents/Personal/Freelance/Tina Marash - Game World Map Editor/Work/ATools/Binary/Model/002-00.lnd'
+---------------------------------------------
+09/09/2021 02:24:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'C:/Users/Christopher/Documents/Personal/Freelance/Tina Marash - Game World Map Editor/Work/ATools/Binary/Model/000-00.lnd'
+---------------------------------------------
+09/09/2021 02:24:30
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'C:/Users/Christopher/Documents/Personal/Freelance/Tina Marash - Game World Map Editor/Work/ATools/Binary/Model/001-00.lnd'
+---------------------------------------------
+09/09/2021 02:24:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'C:/Users/Christopher/Documents/Personal/Freelance/Tina Marash - Game World Map Editor/Work/ATools/Binary/Model/002-00.lnd'
+---------------------------------------------
+09/09/2021 02:24:32
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'C:/Users/Christopher/Documents/Personal/Freelance/Tina Marash - Game World Map Editor/Work/ATools/Binary/Model/000-01.lnd'
+---------------------------------------------
+09/09/2021 02:24:33
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'C:/Users/Christopher/Documents/Personal/Freelance/Tina Marash - Game World Map Editor/Work/ATools/Binary/Model/001-01.lnd'
+---------------------------------------------
+09/09/2021 02:24:34
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'C:/Users/Christopher/Documents/Personal/Freelance/Tina Marash - Game World Map Editor/Work/ATools/Binary/Model/002-01.lnd'
+---------------------------------------------
+09/09/2021 03:27:33
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'C:/Users/Christopher/Documents/Personal/Freelance/Tina Marash - Game World Map Editor/Work/ATools/Binary/Model/000-00.lnd'

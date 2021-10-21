@@ -1,0 +1,15 @@
+---------------------------------------------
+01/09/2021 10:19:47
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+01/09/2021 10:21:26
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'B1_Water.wtr'
+---------------------------------------------
+01/09/2021 10:23:00
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'Moon.dds'

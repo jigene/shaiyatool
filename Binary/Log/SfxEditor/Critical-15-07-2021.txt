@@ -1,0 +1,60 @@
+---------------------------------------------
+15/07/2021 03:02:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'Model/part_femalehair06.o3d'
+---------------------------------------------
+15/07/2021 03:02:41
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'Model/part_femalehead01.o3d'
+---------------------------------------------
+15/07/2021 03:02:53
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'Model/part_femalehand.o3d'
+---------------------------------------------
+15/07/2021 03:02:53
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'Model/part_femalelower.o3d'
+---------------------------------------------
+15/07/2021 03:02:54
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'Model/part_femaleupper.o3d'
+---------------------------------------------
+15/07/2021 03:02:54
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'Model/part_femalefoot.o3d'
+---------------------------------------------
+15/07/2021 03:10:30
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'Model/part_femalehair06.o3d'
+---------------------------------------------
+15/07/2021 03:10:33
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'Model/part_femalehead01.o3d'
+---------------------------------------------
+15/07/2021 03:10:34
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'Model/part_femalehand.o3d'
+---------------------------------------------
+15/07/2021 03:10:34
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'Model/part_femalelower.o3d'
+---------------------------------------------
+15/07/2021 03:10:35
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'Model/part_femaleupper.o3d'
+---------------------------------------------
+15/07/2021 03:10:35
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file 'Model/part_femalefoot.o3d'

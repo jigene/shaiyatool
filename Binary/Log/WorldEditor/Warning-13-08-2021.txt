@@ -1,0 +1,35 @@
+---------------------------------------------
+13/08/2021 15:47:30
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+13/08/2021 15:47:42
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+13/08/2021 15:59:26
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+13/08/2021 16:13:23
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+13/08/2021 16:45:26
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+13/08/2021 16:46:18
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+13/08/2021 16:47:41
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile

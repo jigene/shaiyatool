@@ -1,0 +1,115 @@
+---------------------------------------------
+17/08/2021 10:56:43
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 10:57:01
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'Moon.dds'
+---------------------------------------------
+17/08/2021 10:57:01
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'sundisk.bmp'
+---------------------------------------------
+17/08/2021 10:57:01
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'cloud01_low.dds'
+---------------------------------------------
+17/08/2021 10:57:01
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'cloud02_low.dds'
+---------------------------------------------
+17/08/2021 10:57:01
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'cloud03.dds'
+---------------------------------------------
+17/08/2021 10:57:01
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'skybox01_low.dds'
+---------------------------------------------
+17/08/2021 10:57:01
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'skybox02_low.dds'
+---------------------------------------------
+17/08/2021 10:57:01
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'skybox03.dds'
+---------------------------------------------
+17/08/2021 10:57:35
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 19:48:46
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 19:49:28
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 19:53:40
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 19:57:24
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 19:59:30
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 20:00:17
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 20:07:01
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 20:08:13
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 20:09:19
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 20:10:44
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 20:11:08
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 23:50:47
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+17/08/2021 23:56:04
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile

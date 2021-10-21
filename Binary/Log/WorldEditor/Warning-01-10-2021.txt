@@ -1,0 +1,930 @@
+---------------------------------------------
+01/10/2021 01:30:35
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust01.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust02.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust03.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust04.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust05.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust06.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust07.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust08.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust09.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust11.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust12.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust13.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust14.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust15.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust16.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust17.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust18.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust19.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust20.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust21.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust22.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust23.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust24.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust25.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust26.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust27.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust28.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust29.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust30.jpg'
+---------------------------------------------
+01/10/2021 01:31:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust31.jpg'
+---------------------------------------------
+01/10/2021 02:52:29
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust01.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust02.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust03.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust04.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust05.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust06.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust07.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust08.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust09.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust11.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust12.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust13.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust14.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust15.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust16.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust17.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust18.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust19.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust20.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust21.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust22.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust23.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust24.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust25.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust26.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust27.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust28.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust29.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust30.jpg'
+---------------------------------------------
+01/10/2021 02:52:59
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust31.jpg'
+---------------------------------------------
+01/10/2021 02:59:49
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust01.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust02.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust03.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust04.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust05.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust06.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust07.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust08.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust09.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust11.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust12.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust13.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust14.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust15.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust16.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust17.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust18.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust19.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust20.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust21.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust22.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust23.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust24.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust25.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust26.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust27.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust28.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust29.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust30.jpg'
+---------------------------------------------
+01/10/2021 03:00:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust31.jpg'
+---------------------------------------------
+01/10/2021 03:03:41
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust01.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust02.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust03.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust04.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust05.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust06.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust07.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust08.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust09.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust11.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust12.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust13.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust14.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust15.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust16.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust17.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust18.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust19.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust20.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust21.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust22.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust23.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust24.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust25.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust26.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust27.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust28.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust29.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust30.jpg'
+---------------------------------------------
+01/10/2021 03:04:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust31.jpg'
+---------------------------------------------
+01/10/2021 03:13:05
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust01.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust02.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust03.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust04.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust05.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust06.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust07.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust08.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust09.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust11.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust12.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust13.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust14.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust15.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust16.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust17.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust18.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust19.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust20.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust21.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust22.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust23.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust24.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust25.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust26.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust27.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust28.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust29.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust30.jpg'
+---------------------------------------------
+01/10/2021 03:13:31
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust31.jpg'
+---------------------------------------------
+01/10/2021 03:28:10
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust01.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust02.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust03.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust04.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust05.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust06.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust07.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust08.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust09.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust11.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust12.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust13.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust14.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust15.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust16.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust17.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust18.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust19.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust20.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust21.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust22.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust23.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust24.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust25.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust26.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust27.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust28.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust29.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust30.jpg'
+---------------------------------------------
+01/10/2021 03:28:29
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 179
+class CTexture *__thiscall CTextureMng::GetTerrainTexture(const class QString &)
+Can't load terrain texture from file 'B_caust31.jpg'

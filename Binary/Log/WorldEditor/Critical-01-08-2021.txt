@@ -1,0 +1,25 @@
+---------------------------------------------
+01/08/2021 14:03:34
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\project.cpp line 838
+class CTexture *__thiscall CProject::GetTerrain(int) const
+Terrain texture with ID 10 doesn't exist
+---------------------------------------------
+01/08/2021 14:04:49
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\project.cpp line 838
+class CTexture *__thiscall CProject::GetTerrain(int) const
+Terrain texture with ID 10 doesn't exist
+---------------------------------------------
+01/08/2021 15:05:50
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\project.cpp line 838
+class CTexture *__thiscall CProject::GetTerrain(int) const
+Terrain texture with ID 10 doesn't exist
+---------------------------------------------
+01/08/2021 15:50:38
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\project.cpp line 838
+class CTexture *__thiscall CProject::GetTerrain(int) const
+Terrain texture with ID 10 doesn't exist
+---------------------------------------------
+01/08/2021 21:29:14
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\project.cpp line 838
+class CTexture *__thiscall CProject::GetTerrain(int) const
+Terrain texture with ID 10 doesn't exist

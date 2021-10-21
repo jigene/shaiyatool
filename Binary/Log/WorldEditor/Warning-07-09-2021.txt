@@ -1,0 +1,50 @@
+---------------------------------------------
+07/09/2021 03:55:58
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile
+---------------------------------------------
+07/09/2021 03:56:33
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'Moon.dds'
+---------------------------------------------
+07/09/2021 03:56:35
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'sundisk.bmp'
+---------------------------------------------
+07/09/2021 03:56:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'cloud01_low.dds'
+---------------------------------------------
+07/09/2021 03:56:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'cloud02_low.dds'
+---------------------------------------------
+07/09/2021 03:56:38
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'cloud03.dds'
+---------------------------------------------
+07/09/2021 03:56:38
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'skybox01_low.dds'
+---------------------------------------------
+07/09/2021 03:56:39
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'skybox02_low.dds'
+---------------------------------------------
+07/09/2021 03:56:40
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\texturemng.cpp line 216
+class CTexture *__thiscall CTextureMng::GetWeatherTexture(const class QString &)
+Can't load weather texture from file 'skybox03.dds'
+---------------------------------------------
+07/09/2021 03:56:57
+ line 0
+
+libpng warning: iCCP: known incorrect sRGB profile

@@ -1,0 +1,15 @@
+---------------------------------------------
+14/07/2021 05:12:56
+ line 0
+
+QWindowsWindow::setGeometry: Unable to set geometry 435x434+38+61 (frame: 451x473+30+30) on QWidgetWindow/"dockParticlesWindow" on "\\.\DISPLAY2". Resulting geometry: 435x443+38+61 (frame: 451x482+30+30) margins: 8, 31, 8, 8 minimum size: 435x443 maximum size: 524287x524287 MINMAXINFO maxSize=0,0 maxpos=0,0 mintrack=451,482 maxtrack=524303,524326)
+---------------------------------------------
+14/07/2021 12:44:47
+ line 0
+
+QWindowsWindow::setGeometry: Unable to set geometry 435x434+38+61 (frame: 451x473+30+30) on QWidgetWindow/"dockParticlesWindow" on "\\.\DISPLAY2". Resulting geometry: 435x443+38+61 (frame: 451x482+30+30) margins: 8, 31, 8, 8 minimum size: 435x443 maximum size: 524287x524287 MINMAXINFO maxSize=0,0 maxpos=0,0 mintrack=451,482 maxtrack=524303,524326)
+---------------------------------------------
+14/07/2021 14:02:03
+ line 0
+
+QWindowsWindow::setGeometry: Unable to set geometry 435x434+38+61 (frame: 451x473+30+30) on QWidgetWindow/"dockParticlesWindow" on "\\.\DISPLAY2". Resulting geometry: 435x443+38+61 (frame: 451x482+30+30) margins: 8, 31, 8, 8 minimum size: 435x443 maximum size: 524287x524287 MINMAXINFO maxSize=0,0 maxpos=0,0 mintrack=451,482 maxtrack=524303,524326)

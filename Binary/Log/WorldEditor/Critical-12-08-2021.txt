@@ -1,0 +1,15 @@
+---------------------------------------------
+12/08/2021 18:08:08
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\project.cpp line 838
+class CTexture *__thiscall CProject::GetTerrain(int) const
+Terrain texture with ID 10 doesn't exist
+---------------------------------------------
+12/08/2021 18:17:21
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\file.cpp line 40
+bool __thiscall CFile::Open(const class QString &,enum QIODevice::OpenModeFlag,bool)
+Can't open file '????'
+---------------------------------------------
+12/08/2021 18:40:46
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\common\project.cpp line 838
+class CTexture *__thiscall CProject::GetTerrain(int) const
+Terrain texture with ID 10 doesn't exist

@@ -1,0 +1,175 @@
+---------------------------------------------
+14/07/2021 12:06:04
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:10
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:11
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:12
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:12
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:13
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:14
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:14
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:15
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:15
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:16
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:16
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:16
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:20
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:06:40
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:09:03
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:09:10
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:09:12
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:09:12
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:19:53
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:36:33
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:36:40
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:36:41
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:36:41
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:36:42
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:36:42
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:36:43
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:36:44
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:43:32
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:43:34
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:43:34
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:43:35
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:43:36
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
+---------------------------------------------
+14/07/2021 12:43:37
+c:\users\christopher\documents\personal\freelance\tina marash - game world map editor\work\atools\guieditor\datamanager.cpp line 508
+bool __thiscall CDataManager::_loadScript(const class QString &)
+ in  already in use
