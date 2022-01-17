@@ -6,9 +6,12 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 
+/* TODO - When writing data back to file, work out the math for updating ground textures without removing sound filenames */
+
 public class WLDFileLoader : MonoBehaviour {
 
     private MeshFilter mfGroundInfo;
+    private int nByteFilePos = 0;
 
     // Start is called before the first frame update
     void Start() {
@@ -17,21 +20,22 @@ public class WLDFileLoader : MonoBehaviour {
         byte[] abyFileData;
         byte[] abyHeightMap;
         byte[] abyTxtrData;
-        char[] acharFileChars;
-        int nCharDataLen = 0;
+        byte[] abyFileSectData;
         int nMapSize = 0;
         long lHeightMapLen = 0;
         long lTxtrDataLen = 0;
-        Regex rgChecker;
+        int nFileCount = 0;
         Material mtlCreate;
         List<Material> ltmtlGroundTxtrs = new List<Material>();
         string strFoundText = "";
         string strGroundTxtrFileNames = "";
-        string strWaterTxtrFileName = "";
-        string strSkyTxtrFileName = "";
-        string strCloudTxtrFileNames = "";
-        List<string> ltstrCloudTxtrs = new List<string>();
-        int nCharPos = 0;
+        List<string> ltstrBuildings;
+        List<string> ltstrShapes;
+        List<string> ltstrTrees;
+        List<string> ltstrGrass;
+        List<string> ltstrAnimPrime;
+        List<string> ltstrAnimSec;
+        List<string> ltstrDungeons;
         int nSideLen = 0;
         int nTxtrIndex = 0;
         int nTxtrCheckIndex = 0;
@@ -51,7 +55,7 @@ public class WLDFileLoader : MonoBehaviour {
         try {
 
             fsAccess = new FileStream("Assets/Models/0.wld", FileMode.Open, FileAccess.Read);
-            abyFileData = new byte[fsAccess.Length];
+            abyFileData = new byte[(int)fsAccess.Length];
             fsAccess.Read(abyFileData, 0, (int)fsAccess.Length);
             fsAccess.Close();
 
@@ -60,109 +64,70 @@ public class WLDFileLoader : MonoBehaviour {
             lHeightMapLen = ((((nMapSize / 2) + 1) * ((nMapSize / 2) + 1)) * 2);
             lTxtrDataLen = (((nMapSize / 2) + 1) * ((nMapSize / 2) + 1));
 
-            acharFileChars = Encoding.UTF8.GetString(abyFileData).ToCharArray();
-            nCharDataLen = acharFileChars.Length;
             abyHeightMap = new byte[lHeightMapLen];
             abyTxtrData = new byte[lTxtrDataLen];
 
             Buffer.BlockCopy(abyFileData, 8, abyHeightMap, 0, (int)lHeightMapLen);
             Buffer.BlockCopy(abyFileData, (int)lHeightMapLen + 8, abyTxtrData, 0, (int)lTxtrDataLen);
 
-            rgChecker = new Regex("[a-zA-Z0-9\\._]");
+            nByteFilePos = (int)(lHeightMapLen + 8 + lTxtrDataLen);
+            nFileCount = BitConverter.ToInt32(abyFileData, nByteFilePos);
 
-            while (nCharPos < nCharDataLen && !strFoundText.Contains(".wtr")) {
-                
-                if (rgChecker.IsMatch(acharFileChars[nCharPos].ToString())) {
+            nByteFilePos += 4;
 
-                    strFoundText += acharFileChars[nCharPos].ToString();
-                }
-                else {
+            abyFileSectData = new byte[256];
 
-                    strFoundText = "";
-                }
+            for (int nCounter = 0; nCounter < nFileCount; nCounter++) {
 
-                if (strFoundText.Contains(".tga") || strFoundText.Contains(".dds")) {
+                Buffer.BlockCopy(abyFileData, nByteFilePos, abyFileSectData, 0, 256);
 
-                    if (strGroundTxtrFileNames != "") {
+                if (strGroundTxtrFileNames != "") {
 
-                        strGroundTxtrFileNames += ", ";
-                    }
-
-                    strGroundTxtrFileNames += strFoundText.Trim();
-
-                    mtlCreate = new Material(Shader.Find("Standard"));
-                    mtlCreate.mainTexture = LoadTextureDXT("Assets/Textures/Environment/" +
-                                                           strFoundText.Trim().Replace(".tga", ".dds"));
-
-                    ltmtlGroundTxtrs.Add(mtlCreate);
-                    strFoundText = "";
+                    strGroundTxtrFileNames += ", ";
                 }
 
-                nCharPos++;
-            }
+                strFoundText = Encoding.UTF8.GetString(abyFileSectData);
+                strGroundTxtrFileNames += strFoundText.Substring(0, strFoundText.IndexOf(".") + 4);
 
-            ltmtlGroundTxtrs.Reverse();
+                mtlCreate = new Material(Shader.Find("Standard"));
+                mtlCreate.mainTexture = LoadTextureDXT("Assets/Textures/Environment/" +
+                                                       strFoundText.Substring(0,
+                                                                              strFoundText.IndexOf(".") + 4)
+                                                                                          .Replace(".tga", ".dds"));
 
-            if (strFoundText.Contains(".wtr")) {
+                ltmtlGroundTxtrs.Add(mtlCreate);
+                strFoundText = "";
 
-                strWaterTxtrFileName = strFoundText.Trim();
-            }
-
-            strFoundText = "";
-
-            while (nCharPos < nCharDataLen && !strFoundText.Contains(".bmp")) {
-
-                if (rgChecker.IsMatch(acharFileChars[nCharPos].ToString())) {
-
-                    strFoundText += acharFileChars[nCharPos].ToString();
-                }
-                else {
-
-                    strFoundText = "";
-                }
-
-                nCharPos++;
-            }
-
-            if (strFoundText.Contains(".bmp")) {
-
-                strSkyTxtrFileName = strFoundText.Trim();
-            }
-
-            strFoundText = "";
-
-            while (nCharPos < nCharDataLen) {
-
-                if (rgChecker.IsMatch(acharFileChars[nCharPos].ToString())) {
-
-                    strFoundText += acharFileChars[nCharPos].ToString();
-                }
-                else {
-
-                    strFoundText = "";
-                }
-
-                if (strFoundText.Contains(".tga") || strFoundText.Contains(".dds")) {
-                    
-                    if (strCloudTxtrFileNames != "") {
-
-                        strCloudTxtrFileNames += ", ";
-                    }
-
-                    strCloudTxtrFileNames += strFoundText.Trim();
-
-                    ltstrCloudTxtrs.Add(strFoundText.Trim().Replace(".tga", ".dds"));
-                    strFoundText = "";
-                }
-
-                nCharPos++;
+                nByteFilePos += 516;
             }
 
             Debug.Log("Map Size: " + nMapSize);
-            Debug.Log("Ground Textures: " + String.Join(", ", strGroundTxtrFileNames));
-            Debug.Log("Water Texture File: " + strWaterTxtrFileName);
-            Debug.Log("Sky Texture: " + strSkyTxtrFileName);
-            Debug.Log("Cloud Textures: " + strCloudTxtrFileNames);
+            Debug.Log("Ground Textures: " + strGroundTxtrFileNames);
+
+            nByteFilePos += 256;
+
+            ltstrBuildings = GetModelFileList(abyFileData, "smod");
+            CreateModelIndicators(ReadModelFileData(abyFileData), ltstrBuildings, "BLG");
+            ltstrShapes = GetModelFileList(abyFileData, "smod");
+            CreateModelIndicators(ReadModelFileData(abyFileData), ltstrShapes, "SHAPE");
+            ltstrTrees = GetModelFileList(abyFileData, "smod");
+            CreateModelIndicators(ReadModelFileData(abyFileData), ltstrTrees, "TREE");
+            ltstrGrass = GetModelFileList(abyFileData, "smod");
+            CreateModelIndicators(ReadModelFileData(abyFileData), ltstrGrass, "GRASS");
+            ltstrAnimPrime = GetModelFileList(abyFileData, "vani");
+            CreateModelIndicators(ReadModelFileData(abyFileData), ltstrAnimPrime, "ANIM_MAIN");
+            ltstrAnimSec = GetModelFileList(abyFileData, "vani");
+            CreateModelIndicators(ReadModelFileData(abyFileData), ltstrAnimSec, "ANIM_SEC");
+            ltstrDungeons = GetModelFileList(abyFileData, "dg");
+            CreateModelIndicators(ReadModelFileData(abyFileData), ltstrDungeons, "DUNG");
+
+            Debug.Log("Building Models: " + String.Join(", ", ltstrBuildings));
+            Debug.Log("Shape Models: " + String.Join(", ", ltstrShapes));
+            Debug.Log("Trees Models: " + String.Join(", ", ltstrTrees));
+            Debug.Log("Grass Models: " + String.Join(", ", ltstrGrass));
+            Debug.Log("Primary Animation Models: " + String.Join(", ", ltstrAnimPrime));
+            Debug.Log("Secondary Animation Models: " + String.Join(", ", ltstrAnimSec));
+            Debug.Log("Dungeons Models: " + String.Join(", ", ltstrDungeons));
 
             for (int nXPos = 0; nXPos < nMapSize; nXPos++) {
 
@@ -193,7 +158,7 @@ public class WLDFileLoader : MonoBehaviour {
                             }
 
                             ltmtlGroundMapList.Add(ltmtlGroundTxtrs[nTxtrIndex]);
-                            
+
                             ltv3SubmitVerts = ltv3Verts.GetRange(nStartIndex, (nZPos + 1) - nStartIndex);
                             ltv3SubmitVerts.AddRange(ltv3Verts.GetRange(nStartIndex + nMapSize, (nZPos + 1) - nStartIndex));
                             ltv3SubmitNrmls = ltv3Nrmls.GetRange(nStartIndex, (nZPos + 1) - nStartIndex);
@@ -226,7 +191,7 @@ public class WLDFileLoader : MonoBehaviour {
 
             mhGround.CombineMeshes(ltciMeshes.ToArray(), false);
 
-            mfGroundInfo.mesh = mhGround;
+            mfGroundInfo.sharedMesh = mhGround;
         }
         catch (Exception exError) {
 
@@ -243,13 +208,13 @@ public class WLDFileLoader : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        
+
     }
 
     CombineInstance BuildGroundLane(List<Vector3> ltv3Verts,
                                     List<int> ltnTriages,
                                     List<Vector3> ltv3Nrmls,
-                                    List<Vector2> ltv2UV) { 
+                                    List<Vector2> ltv2UV) {
 
         Mesh mhGround = new Mesh();
         CombineInstance ciMeshSelect = new CombineInstance();
@@ -274,7 +239,7 @@ public class WLDFileLoader : MonoBehaviour {
     Texture2D LoadTextureDXT(String strFilePathName) {
 
         FileStream fsAccess = new FileStream(strFilePathName, FileMode.Open, FileAccess.Read);
- 
+
         byte[] ddsBytes = new byte[fsAccess.Length];
         fsAccess.Read(ddsBytes, 0, (int)fsAccess.Length);
         fsAccess.Close();
@@ -302,7 +267,7 @@ public class WLDFileLoader : MonoBehaviour {
         List<int> ltnTriages = new List<int>();
         int nSectionSize = nSize / 2;
 
-        try { 
+        try {
 
             for (int nCounter = nSectionSize + 1; nCounter < nSize; nCounter++) {
 
@@ -329,7 +294,7 @@ public class WLDFileLoader : MonoBehaviour {
         float fRowVal = 0;
         float fTileVal = 0;
 
-        try { 
+        try {
 
             for (int nCounter = 0; nCounter < nVertListLen; nCounter++) {
 
@@ -349,5 +314,111 @@ public class WLDFileLoader : MonoBehaviour {
         }
 
         return ltv2UV;
+    }
+
+    List<string> GetModelFileList(byte[] abyFileData, string strFileType) {
+
+        byte[] abyFileSectData = new byte[256];
+        int nFileTypeLen = strFileType.Length;
+        int nFileCount = BitConverter.ToInt32(abyFileData, nByteFilePos);
+        string strFoundText = "";
+        List<string> ltstrFileList = new List<string>();
+
+        nByteFilePos += 4;
+
+        for (int nCounter = 0; nCounter < nFileCount; nCounter++) {
+
+            Buffer.BlockCopy(abyFileData, nByteFilePos, abyFileSectData, 0, 256);
+
+            strFoundText = Encoding.UTF8.GetString(abyFileSectData);
+            ltstrFileList.Add(strFoundText.Substring(0, strFoundText.IndexOf(".") + nFileTypeLen + 1));
+
+            nByteFilePos += 256;
+        }
+
+        return ltstrFileList;
+    }
+
+    Dictionary<int, List<Vector3[]>> ReadModelFileData(byte[] abyFileData) {
+
+        UInt32 nModelFileCounts = 0;
+        int nFileIndex = 0;
+        Dictionary<int, List<Vector3[]>> dictCoods = new Dictionary<int, List<Vector3[]>>();
+
+        try {
+
+            nModelFileCounts = BitConverter.ToUInt32(abyFileData, nByteFilePos);
+
+            for (int nCounter = 0; nCounter < nModelFileCounts; nCounter++) {
+
+                nFileIndex = (int)BitConverter.ToUInt32(abyFileData, nByteFilePos += 4);
+
+                if (!dictCoods.ContainsKey(nFileIndex)) {
+
+                    dictCoods.Add(nFileIndex, new List<Vector3[]>());
+                }
+
+                dictCoods[nFileIndex].Add(new Vector3[] {
+                    new Vector3(BitConverter.ToSingle(abyFileData, nByteFilePos += 4),
+                                BitConverter.ToSingle(abyFileData, nByteFilePos += 4),
+                                BitConverter.ToSingle(abyFileData, nByteFilePos += 4)),
+                    new Vector3(BitConverter.ToSingle(abyFileData, nByteFilePos += 4),
+                                BitConverter.ToSingle(abyFileData, nByteFilePos += 4),
+                                BitConverter.ToSingle(abyFileData, nByteFilePos += 4)),
+                    new Vector3(BitConverter.ToSingle(abyFileData, nByteFilePos += 4),
+                                BitConverter.ToSingle(abyFileData, nByteFilePos += 4),
+                                BitConverter.ToSingle(abyFileData, nByteFilePos += 4))
+                });
+            }
+
+            nByteFilePos += 4;
+        }
+        catch (Exception exError) {
+
+            throw exError;
+        }
+
+        return dictCoods;
+    }
+
+    void CreateModelIndicators(Dictionary<int, List<Vector3[]>> dictModelInfo, 
+                               List<string> ltstrNames,
+                               string strType) {
+
+        int nFileNum = 0;
+        int nFileNameNum = 0;
+
+        foreach (KeyValuePair<int, List<Vector3[]>> kvpModelData in dictModelInfo) {
+                    
+            foreach (Vector3[] av3Coords in kvpModelData.Value) { 
+                
+                PlaceModelIndicators(ltstrNames[kvpModelData.Key] + "-" + ++nFileNameNum + "-" + strType + ++nFileNum,
+                                     av3Coords[0]);
+            }
+
+            nFileNameNum = 0;
+        }
+    }
+
+    void PlaceModelIndicators(string strName, Vector3 v3Pos) {
+
+        GameObject goIndicator = GameObject.Find("Model Indicator");
+        GameObject goCloneHolder = new GameObject(strName);
+        Mesh mhOrig = goIndicator.GetComponent<MeshFilter>().sharedMesh;
+        Mesh mhClone = new Mesh();
+        Transform tfCloneLoc = goCloneHolder.transform;
+
+        mhClone.vertices = mhOrig.vertices;
+        mhClone.triangles = mhOrig.triangles;
+        mhClone.uv = mhOrig.uv;
+        mhClone.normals = mhOrig.normals;
+        mhClone.colors = mhOrig.colors;
+        mhClone.tangents = mhOrig.tangents;
+
+        goCloneHolder.AddComponent<MeshFilter>().sharedMesh = mhClone;
+        goCloneHolder.AddComponent<MeshRenderer>().materials = goIndicator.GetComponent<MeshRenderer>().materials;
+        tfCloneLoc.position = new Vector3(v3Pos.x, 0, v3Pos.z);
+        tfCloneLoc.rotation = goIndicator.transform.rotation;
+        tfCloneLoc.localScale = goIndicator.transform.localScale;
     }
 }
