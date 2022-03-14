@@ -19,6 +19,7 @@ public class WLDFileLoader : MonoBehaviour {
     private int nByteFileReadPos = 0;
     private Dictionary<string, Dictionary<string, Vector3[]>> dictModelCoords = new Dictionary<string, Dictionary<string, Vector3[]>>();
     private Dictionary<string, List<string>> dictModelNamesByType = new Dictionary<string, List<string>>();
+    private Dictionary<string, byte[]> dictGroundTxtrData = new Dictionary<string, byte[]>();
     private List<Material> ltmtlGroundTxtrs = new List<Material>();
     private List<MaterialPosInfo> ltmtlTxtPosInfo = new List<MaterialPosInfo>();
     private List<Material> ltmtlGroundMapList = new List<Material>();
@@ -30,7 +31,6 @@ public class WLDFileLoader : MonoBehaviour {
     private byte[] abyFileData = null;
     private byte[] abyHeightMap = null;
     private byte[] abyTxtrData = null;
-    private Dictionary<string, string> dictGroundSounds = new Dictionary<string, string>();
     private string strWaterFileName = "";
 
     // Start is called before the first frame update
@@ -104,7 +104,7 @@ public class WLDFileLoader : MonoBehaviour {
                 ltmtlTxtPosInfo.Clear();
                 ltmtlGroundTxtrs.Clear();
                 ltmtlGroundMapList.Clear();
-                dictGroundSounds.Clear();
+                dictGroundTxtrData.Clear();
             }
 
             fsAccess = new FileStream(strFilePath, FileMode.Open, FileAccess.Read);
@@ -128,11 +128,10 @@ public class WLDFileLoader : MonoBehaviour {
 
             nByteFileReadPos += 4;
 
-            abyFileSectData = new byte[256];
-
             for (int nCounter = 0; nCounter < nFileCount; nCounter++) {
 
-                Buffer.BlockCopy(abyFileData, nByteFileReadPos, abyFileSectData, 0, 256);
+                abyFileSectData = new byte[516];
+                Buffer.BlockCopy(abyFileData, nByteFileReadPos, abyFileSectData, 0, 516);
 
                 if (strGroundTxtrFileNames != "") {
 
@@ -145,19 +144,12 @@ public class WLDFileLoader : MonoBehaviour {
                 strFoundText = strFoundText.Replace(".tga", ".dds");
                 
                 ltmtlGroundTxtrs.Add(CreateMaterial(strFoundText));
+                dictGroundTxtrData.Add(strFoundText, abyFileSectData);
 
-                nByteFileReadPos += 260;
-                Buffer.BlockCopy(abyFileData, nByteFileReadPos, abyFileSectData, 0, 256);
-
-                if (Encoding.UTF8.GetString(abyFileSectData).IndexOf(".wav") > 0) {
-
-                    dictGroundSounds.Add(strFoundText,
-                                         Encoding.UTF8.GetString(abyFileSectData).Substring(0, Encoding.UTF8.GetString(abyFileSectData).IndexOf(".") + 4));
-                }
-
-                nByteFileReadPos += 256;
+                nByteFileReadPos += 516;
             }
 
+            abyFileSectData = new byte[256];
             Buffer.BlockCopy(abyFileData, nByteFileReadPos, abyFileSectData, 0, 256);
             strWaterFileName = Encoding.UTF8.GetString(abyFileSectData).Substring(0, Encoding.UTF8.GetString(abyFileSectData).IndexOf(".") + 4);
             nByteFileReadPos += 256;
@@ -359,15 +351,16 @@ public class WLDFileLoader : MonoBehaviour {
 
                 foreach (Material mtlSelect in ltmtlGroundTxtrs) {
 
-                    abyFileOut = CopyWriteData(abyFileOut, Encoding.UTF8.GetBytes(mtlSelect.name), nByteFileWritePos);
-                    nByteFileWritePos += 260;
+                    if (dictGroundTxtrData.ContainsKey(mtlSelect.name)) { 
 
-                    if (dictGroundSounds.ContainsKey(mtlSelect.name)) {
+                        abyFileOut = CopyWriteData(abyFileOut, dictGroundTxtrData[mtlSelect.name], nByteFileWritePos);
+                    }
+                    else {
 
-                        abyFileOut = CopyWriteData(abyFileOut, Encoding.UTF8.GetBytes(dictGroundSounds[mtlSelect.name]), nByteFileWritePos);
+                        abyFileOut = CopyWriteData(abyFileOut, Encoding.UTF8.GetBytes(mtlSelect.name), nByteFileWritePos);
                     }
 
-                    nByteFileWritePos += 256;
+                    nByteFileWritePos += 516;
                 }
 
                 abyFileOut = CopyWriteData(abyFileOut, Encoding.UTF8.GetBytes(strWaterFileName), nByteFileWritePos);
